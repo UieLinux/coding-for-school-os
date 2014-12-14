@@ -21,6 +21,8 @@ Personalizzare l'interfaccia grafica
 TODO
 ---
 * Cambiare immagine logout (https://bbs.archlinux.org/viewtopic.php?id=86585)
+* Icona menu (start) pannello (tasto destro impostazioni)
+* Wallpaper
 
 Links
 ---
