@@ -1,6 +1,6 @@
 pikode
 ======
-pikode is a new project uielinux for children who want to learn to program.
+pikode is a new uielinux project for children who want to learn software programming
 
 Stay connected!
 
