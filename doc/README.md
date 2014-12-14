@@ -1,13 +1,15 @@
-#################################INSTALLAZIONE##################################
+INSTALLAZIONE
+---
 
-Su SD: 
+su SD: 
 http://downloads.raspberrypi.org/raspbian_latest
 # unzip -p 201X-XX-XX-wheezy-raspbian.zip |dd of=/dev/sdX bs=4M
 
 In Emulazione:
 http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/
 
-###################################FIRST BOOT###################################
+FIRST BOOT
+---
 
 Al primo boot si avvia in automatico il tool raspi-config, i passaggi da fare
 sono:
@@ -36,7 +38,8 @@ sono:
 
 <Finish> -> <Yes>
 
-##################################SECOND BOOT###################################
+SECOND BOOT
+---
 
 1- Cancellare dal desktop le icone inutili, restano solo le icone:
   -Scratch
@@ -46,7 +49,8 @@ sono:
   -ocr_pi.png
 3- Svoutare il cestino
 
-######################################TODO######################################
+TODO
+---
 
 0- Password di default utente Pi
 1- Wallpaper sburone
