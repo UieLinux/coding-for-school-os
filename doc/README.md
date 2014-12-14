@@ -54,20 +54,19 @@ SECOND BOOT
   - cartella python_games
   - ocr_pi.png
 
-3.Svoutare il cestino
+3.Svuotare il cestino
 
 TODO
 ---
 
-0- Password di default utente Pi
-1- Wallpaper sburone
-2- Tema LXDE appropriato
-3- Vedere se è il caso di eliminare alcuni programmi invece di togliere solo le 
-   icone dal desktop
-4- Pensare bene a che programmi e link aggiungere, tra cui alcune idee:
-  -client owncloud
-  -blockly (https://code.google.com/p/blockly/)
-  -Kano ponghttp://www.codecademy.com/courses/kano-pong/0/1
+0. Password di default utente Pi
+1. Wallpaper sburone
+2. Tema LXDE appropriato
+3. Vedere se è il caso di eliminare alcuni programmi invece di togliere solo le icone dal desktop
+4. Pensare bene a che programmi e link aggiungere, tra cui alcune idee:
+  * client owncloud
+  * blockly (https://code.google.com/p/blockly/)
+  * Kano ponghttp://www.codecademy.com/courses/kano-pong/0/1
 
 
 
