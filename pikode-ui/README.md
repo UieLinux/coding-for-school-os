@@ -1,4 +1,4 @@
-Thema pikode-theme
+Tema pikode-theme
 ---
 * Creare un file tar.gz e metterlo nella /usr/share/themes
 * Aprire il gestore temi di openbox e selezionarlo
