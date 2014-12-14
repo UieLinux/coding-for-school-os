@@ -8,3 +8,4 @@ Stay connected!
 Resources
 ---
 * https://github.com/cymplecy/scratch_gpio
+* http://simplesi.net/scratchgpio/
