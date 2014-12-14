@@ -1,53 +1,60 @@
 INSTALLAZIONE
 ---
 
-su SD: 
-http://downloads.raspberrypi.org/raspbian_latest
-# unzip -p 201X-XX-XX-wheezy-raspbian.zip |dd of=/dev/sdX bs=4M
+su SD:
 
+    $ wget http://downloads.raspberrypi.org/raspbian_latest
+    # unzip -p 201X-XX-XX-wheezy-raspbian.zip |dd of=/dev/sdX bs=4M
 In Emulazione:
-http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/
 
+[http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/](http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/)
 FIRST BOOT
 ---
+Al primo boot si avvia in automatico il tool raspi-config, i passaggi da fare sono:
 
-Al primo boot si avvia in automatico il tool raspi-config, i passaggi da fare
-sono:
+1.Expand Filesystem
 
-1-Expand Filesystem
-  Basta dare invio e riformatta la SD in modo da occuparla interamente
+  - Basta dare invio e riformatta la SD in modo da occuparla interamente
 
-2-Change User Password
-  Ho impostato come Password dell'utente pi "spider", possiamo discutere per 
-  mettere una Password di default più fica.
+2.Change User Password
 
-3-Enable Boot to Desktop/Scratch
-  Selezionare "Desktop Log in..."
+  - Ho impostato come Password dell'utente pi "spider"
 
-4-Internationalisation Options
-  I1-Change Locale
-    [*]it_IT.UTF-8 UTF-8
-    selezionarlo come default locale for system enviroment
+3.Enable Boot to Desktop/Scratch
+
+  - Selezionare "Desktop Log in..."
+
+4.Internationalisation Options
+
+  - I1-Change Locale
+
+     [*]it_IT.UTF-8 UTF-8 default locale for system enviroment
     
-  I2-Change Timezone
-    Europe->Rome
-    
-  I3-Change Keyboard Layout
-    Generic 105-key (Intl) PC -> Other -> Italian -> Italian -> The default for 
-    the keyboard layout -> No compose key -> <No>
+  - I2-Change Timezone
 
-<Finish> -> <Yes>
+     Europe->Rome
+    
+  - I3-Change Keyboard Layout
+
+     Generic 105-key (Intl) PC -> Other -> Italian -> Italian -> The default for
+     the keyboard layout -> No compose key -> No
+
+Finish -> Yes
 
 SECOND BOOT
 ---
 
-1- Cancellare dal desktop le icone inutili, restano solo le icone:
-  -Scratch
-  -WiFi Config
-2- Cancellare file inutili nella Home:
-  -cartella python_games
-  -ocr_pi.png
-3- Svoutare il cestino
+1.Cancellare dal desktop le icone inutili, restano solo le icone:
+
+  - Scratch
+  - WiFi Config
+
+2.Cancellare file inutili nella Home:
+
+  - cartella python_games
+  - ocr_pi.png
+
+3.Svoutare il cestino
 
 TODO
 ---
