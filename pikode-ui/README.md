@@ -5,7 +5,7 @@ Tema pikode-theme
 
 Icone pikode-icons
 ---
-é Creare un file tar.gz e metterlo nella /usr/share/icons
+* Creare un file tar.gz e metterlo nella /usr/share/icons
 * Aprire la personalizzazione dell'interfaccia nelle preferenze e selezionarlo
 
 Personalizzare l'interfaccia grafica
