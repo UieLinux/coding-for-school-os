@@ -40,7 +40,6 @@ Al primo boot si avvia in automatico il tool raspi-config, i passaggi da fare so
      the keyboard layout -> No compose key -> No
 
 Finish -> Yes
-
 SECOND BOOT
 ---
 
@@ -56,18 +55,27 @@ SECOND BOOT
 
 3.Svuotare il cestino
 
+4.Aggiornare il sistema e fare il reboot:
+
+    $ sudo apt-get update && sudo apt-get upgrade
+5.Installazione Tema personalizzato:
+
+    $ git clone https://github.com/UieLinux/pikode.git
+    $ cd pikode/pikode-ui/
+    $ sudo mv pikode-icons/ /usr/share/icons/
+    $ sudo mv pikode-theme/ /usr/share/themes/
 TODO
 ---
 
-0. Password di default utente Pi
-1. Wallpaper sburone
-2. Tema LXDE appropriato
-3. Vedere se è il caso di eliminare alcuni programmi invece di togliere solo le icone dal desktop
-4. Pensare bene a che programmi e link aggiungere, tra cui alcune idee:
-  * client owncloud
-  * blockly (https://code.google.com/p/blockly/)
-  * Kano ponghttp://www.codecademy.com/courses/kano-pong/0/1
-
+1. Password di default utente Pi
+2. Wallpaper sburone
+3. Tema LXDE appropriato
+4. Vedere se è il caso di eliminare alcuni programmi invece di togliere solo le icone dal desktop
+5. Pensare bene a che programmi e link aggiungere, tra cui alcune idee:
+  - Client [owncloud](http://owncloud.org/)
+  - [blockly](https://code.google.com/p/blockly/)
+  - [Kano pong](http://www.codecademy.com/courses/kano-pong/0/1)
+  - [kids Ruby](http://kidsruby.com)
 
 
 
