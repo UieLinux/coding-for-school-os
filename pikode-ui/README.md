@@ -17,3 +17,7 @@ Personalizzare l'interfaccia grafica
 ---
 * http://wiki.ubuntu-it.org/AmbienteGrafico/Lxde/Personalizzazione
 * http://openbox.org/wiki/Help:Themes
+
+Links
+---
+* http://www.lffl.org/2014/10/lightdm-greeter-settings-personalizzare-display-manager-xubuntu-lubuntu.html#more
