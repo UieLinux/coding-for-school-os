@@ -1,0 +1,21 @@
+###ICONE SUL DESKTOP-Default###
+-shutdown		-Accesso rapido allo spegnimento
+-IDLE			-IDLE di python 2.7.X	
+-OCR Resources		-http://www.ocr.org.uk/qualifications/by-subject/computing/raspberry-pi/
+-Scratch		-Programmazione visuale
+-Minecraft Pi		-Giovo 3D
+-Sonic Pi		-Programmazione visuale
+-LXTerminal		-Terminale grafico per LXDE
+-Browser Epiphany	-Browser in gtk
+-Mathematica		-Calcolo computazionale, varie ed eventuali(http://www.wolfram.com/mathematica)
+-Python Games		-Giochini tipo "forza 4" in python
+-La guida Debian	-Doc debian locale in Inglese
+-WiFi Config		-Strumento di configurazione del wifi
+-IDLE 3			-IDLE di python 3.x
+-Pi Store		-Software store della raspberry
+-Wolfram		-IDE di wolfram (http://www.wolfram.com/raspberry-pi/)
+
+###ICONE SUL DESKTOP###
+
+-Scratch
+-Wifi config		-Cambiando nome all'icona
