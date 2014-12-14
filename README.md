@@ -1,7 +1,8 @@
 pikode
 ======
-pikode is a new uielinx project for kids coding into raspberry pi 
-Stay connect !
+pikode is a new uielinux project for children who want to learn software programming
+
+Stay connected!
 
 
 Resources
