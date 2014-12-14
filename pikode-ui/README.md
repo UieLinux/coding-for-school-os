@@ -1,11 +1,11 @@
 Tema pikode-theme
 ---
-* Creare un file tar.gz e metterlo nella /usr/share/themes
+* Mettere la cartella nella /usr/share/themes
 * Aprire il gestore temi di openbox e selezionarlo
 
 Icone pikode-icons
 ---
-* Creare un file tar.gz e metterlo nella /usr/share/icons
+* Mettere la cartella nella /usr/share/icons
 * Aprire la personalizzazione dell'interfaccia nelle preferenze e selezionarlo
 
 Font
