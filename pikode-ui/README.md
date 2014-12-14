@@ -8,6 +8,11 @@ Icone pikode-icons
 * Creare un file tar.gz e metterlo nella /usr/share/icons
 * Aprire la personalizzazione dell'interfaccia nelle preferenze e selezionarlo
 
+Font
+---
+* Impostare i fond droid sans
+* Nel pannello mettere grafica flat 
+
 Personalizzare l'interfaccia grafica
 ---
 * http://wiki.ubuntu-it.org/AmbienteGrafico/Lxde/Personalizzazione
