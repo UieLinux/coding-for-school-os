@@ -1,18 +1,18 @@
-# Default theme for Lubuntu by The Lubuntu Artwork Team
-# (Rafael Laguna and and Alexander Andjelkovic)
+# Default theme for Coding For School project by UIELinux Artwork Team
+# (Sergio Gridelli and Stefano Teodorani)
 # Based on Radiance. GPL2 / Open Source licensed
 #
-# More info at: https://launchpad.net/~lubuntu-art
+# More info at: https://www.uielinux.org
 
 [Desktop Entry]
-Name=Lubuntu
+Name=CodingForSchool
 Type=X-GNOME-Metatheme
 Comment=Default theme for Lubuntu
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Lubuntu
-IconTheme=Lubuntu
+GtkTheme=cfs-theme
+IconTheme=cfs-icons
 CursorTheme=DMZ-Black
 CursorSize=24
 NotificationTheme=ubuntu
