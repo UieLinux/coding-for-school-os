@@ -40,9 +40,25 @@ Al primo boot si avvia in automatico il tool raspi-config, i passaggi da fare so
      the keyboard layout -> No compose key -> No
 
 Finish -> Yes
+
 SECOND BOOT
 ---
+- Al primo boot Aprire una sessione terminale
+- Nella home (/home/pi) eseguite (git clone https://github.com/UieLinux/coding-for-school-os)
+- Eseguire : cd ./coding-for-school-os
+- Eseguire sudo -s (ora sei root)
+- Eseguire ./install.sh
+- Eseguire exit (da sistemare impostare il desktop via script
+- Togliere l'icona screenlock
+- Togliere l'icona cpu usage monitor
+- In Panel Preference / Appearance scegliere Solid theme 
+- In Panel Preference / Appearance scegliere Font color #393939 
+- In preferenze/ Openbox Configuration Manager scegliere il tema coding-for-school
+- In Preferences / Customize Look and Feel scegliere in Widget, coding-for-school
+- In Preferences / Customize Look and Feel scegliere in Icon theme, coding-for-school 
 
+THIRD BOOT
+---
 1.Cancellare dal desktop le icone inutili, restano solo le icone:
 
   - Scratch
