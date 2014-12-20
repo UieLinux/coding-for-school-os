@@ -17,6 +17,17 @@ cp -R ./cfs-ui/artwork/coding-for-school/ /usr/share/coding-for-school
 echo "Set correct shutdown icon for panel"
 sed -i 's/gnome-logout/system-shutdown-panel/g' /usr/share/applications/lxde-logout.desktop 
 
+echo "Remove desktop icons"
+rm ~/Desktop/debian-reference-common.desktop
+rm ~/Desktop/idle*
+rm ~/Desktop/shutdown.desktop
+rm ~/Desktop/python-games.desktop
+rm ~/Desktop/minecraft-pi.desktop 
+rm ~/Desktop/lxterminal.desktop 
+rm ~/Desktop/wolfram-*
+rm ~/Desktop/ocr_resources.desktop
+rm ~/Desktop/epiphany-browser.desktop 
+
 #echo "Install pavucontrol"
 #apt-get install -y pavucontrol
 
@@ -28,9 +39,7 @@ echo "4. Cliccare Modifica"
 echo "5. Rimuovere Screenlock"
 echo "Quando fatto premere invio"
 read x
-exit
-echo "Exit to the $USER user" 
 
 echo "Setting wallpaper" 
-pcmanfm --set-wallpaper /usr/share/coding-for-school/wallpapers/cfs-wallpaper.png 
+su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/wallpapers/cfs-wallpaper.png"
 
