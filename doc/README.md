@@ -57,6 +57,18 @@ SECOND BOOT
 - In Preferences / Customize Look and Feel scegliere in Widget, coding-for-school
 - In Preferences / Customize Look and Feel scegliere in Icon theme, coding-for-school 
 
+- Impostare xorg per farlo andare a 800x600. Creare in file /etc/X11/xorg.conf e incollarci:
+
+```
+Section "Screen"
+Identifier "Default Screen"
+SubSection "Display"
+Depth 16
+Modes "800x600" "640x480"
+EndSubSection
+EndSection
+```
+
 THIRD BOOT
 ---
 1.Cancellare dal desktop le icone inutili, restano solo le icone:
