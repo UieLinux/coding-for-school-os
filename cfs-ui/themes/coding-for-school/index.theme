@@ -1,0 +1,20 @@
+# Default theme for Coding for School by UIELinux Artwork Team
+# (Stefano Teodorani and Sergio Gridelli)
+# Based on Radiance. GPL2 / Open Source licensed
+#
+# More info at: https://www.uielinux.org
+
+[Desktop Entry]
+Name=CodingForSchool
+Type=X-GNOME-Metatheme
+Comment=Default theme for Coding For School
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=CodingForSchool
+IconTheme=CodingForSchool
+CursorTheme=DMZ-Black
+CursorSize=24
+NotificationTheme=ubuntu
+MetacityTheme=Box-default
+ButtonLayout=close,minimize,maximize:
