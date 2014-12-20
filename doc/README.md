@@ -92,6 +92,7 @@ THIRD BOOT
     $ cd pikode/pikode-ui/
     $ sudo mv pikode-icons/ /usr/share/icons/
     $ sudo mv pikode-theme/ /usr/share/themes/
+
 TODO
 ---
 
@@ -105,12 +106,6 @@ TODO
   - [Kano pong](http://www.codecademy.com/courses/kano-pong/0/1)
   - [kids Ruby](http://kidsruby.com)
 
-
-
-
-
-
-
-
-
-
+Risorse
+---
+  - http://www.linux-mitterteich.de/fileadmin/datafile/papers/2013/qemu_raspiemu_lug_18_sep_2013.pdf
