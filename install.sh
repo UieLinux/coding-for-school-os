@@ -6,27 +6,33 @@ if [ $USER != "root" ]; then
 fi
 
 echo "Copy icons pack..."
-cp -R ./cfs-ui/icons/coding-for-school/ /usr/share/icons
+rm -rf /usr/share/icons/coding-for-school
+cp -R ./cfs-ui/icons/coding-for-school/ /usr/share/icons/
 
 echo "Copy theme pack..."
-cp -R ./cfs-ui/themes/coding-for-school/ /usr/share/themes
+rm -rf /usr/share/themes/coding-for-school
+cp -R ./cfs-ui/themes/coding-for-school/ /usr/share/themes/
 
 echo "Copy artwork pack..."
-cp -R ./cfs-ui/artwork/coding-for-school/ /usr/share/coding-for-school
+rm -rf /usr/share/coding-for-school
+cp -R ./cfs-ui/artwork/coding-for-school/* /usr/share/coding-for-school/
 
 echo "Set correct shutdown icon for panel"
 sed -i 's/gnome-logout/system-shutdown-panel/g' /usr/share/applications/lxde-logout.desktop 
 
 echo "Remove desktop icons"
-rm ~/Desktop/debian-reference-common.desktop
-rm ~/Desktop/idle*
-rm ~/Desktop/shutdown.desktop
-rm ~/Desktop/python-games.desktop
-rm ~/Desktop/minecraft-pi.desktop 
-rm ~/Desktop/lxterminal.desktop 
-rm ~/Desktop/wolfram-*
-rm ~/Desktop/ocr_resources.desktop
-rm ~/Desktop/epiphany-browser.desktop 
+rm -f /home/pi/Desktop/debian-reference-common.desktop
+rm -f /home/pi/Desktop/idle*
+rm -f /home/pi/Desktop/shutdown.desktop
+rm -f /home/pi/Desktop/python-games.desktop
+rm -f /home/pi/Desktop/minecraft-pi.desktop 
+rm -f /home/pi/Desktop/lxterminal.desktop 
+rm -f /home/pi/Desktop/wolfram-*
+rm -f /home/pi/Desktop/ocr_resources.desktop
+rm -f /home/pi/Desktop/epiphany-browser.desktop 
+
+echo "Setting wallpaper" 
+su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/wallpapers/cfs-wallpaper.png"
 
 #echo "Install pavucontrol"
 #apt-get install -y pavucontrol
@@ -37,9 +43,5 @@ echo "2. Impostazioni pannello"
 echo "3. In scheda Applet pannello scegliere barra avvio applicazioni (ultima)"
 echo "4. Cliccare Modifica"
 echo "5. Rimuovere Screenlock"
-echo "Quando fatto premere invio"
-read x
-
-echo "Setting wallpaper" 
-su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/wallpapers/cfs-wallpaper.png"
+echo "6. Rimuovere Workspace selector"
 
