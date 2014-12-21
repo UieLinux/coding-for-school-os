@@ -7,7 +7,7 @@ Installare Raspbian su SD
 ```
   $ wget http://downloads.raspberrypi.org/raspbian_latest
 ```
-- Inserire l'SD nel computer ed eseguire:
+2. Inserire l'SD nel computer ed eseguire:
 ```
   # unzip -p 201X-XX-XX-wheezy-raspbian.zip | dd of=/dev/sdX bs=4M
 ```
@@ -15,8 +15,8 @@ Installare Raspbian su SD
 Predisporre l'ambiente di sviluppo
 ---
 1. Scaricare l'ultima immagine di raspbian (vedi sopra)
-- Seguire questa guida per rendere l'immagine avviabile con qemu [http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/](http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/)
-- Impostare xorg per farlo andare a 800x600. Creare in file /etc/X11/xorg.conf e incollarci:
+2. Seguire questa guida per rendere l'immagine avviabile con qemu [http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/](http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/)
+3. Impostare xorg per farlo andare a 800x600. Creare in file /etc/X11/xorg.conf e incollarci:
 ```
   Section "Screen"
   Identifier "Default Screen"
@@ -89,7 +89,7 @@ Personalizzare l'aspetto (second boot)
 Note:
 ---
 1. Vedere se è il caso di eliminare alcuni programmi invece di togliere solo le icone dal desktop
--. Pensare bene a che programmi e link aggiungere, tra cui alcune idee:
+- Pensare bene a che programmi e link aggiungere, tra cui alcune idee:
   - [owncloud](http://owncloud.org/)
   - [blockly](https://code.google.com/p/blockly/)
   - [Kano pong](http://www.codecademy.com/courses/kano-pong/0/1)
