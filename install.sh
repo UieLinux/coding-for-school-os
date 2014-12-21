@@ -28,6 +28,10 @@ rm ~/Desktop/wolfram-*
 rm ~/Desktop/ocr_resources.desktop
 rm ~/Desktop/epiphany-browser.desktop 
 
+echo "Setting cfs-wallpaper" 
+su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/wallpapers/cfs-wallpaper.png"
+
+
 #echo "Install pavucontrol"
 #apt-get install -y pavucontrol
 
@@ -40,6 +44,4 @@ echo "5. Rimuovere Screenlock"
 echo "Quando fatto premere invio"
 read x
 
-echo "Setting wallpaper" 
-su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/wallpapers/cfs-wallpaper.png"
 
