@@ -1,13 +1,13 @@
 Coding for School
 ===
-1. [Predisporre l'ambiente di sviluppo](README.md#1-predisporre-lambiente-di-sviluppo)
-2. [Configurare raspbian](README.md#2-configurare-raspbian-first-boot)
+* [Predisporre l'ambiente di sviluppo](README.md#1-predisporre-lambiente-di-sviluppo)
+* [Configurare raspbian](README.md#2-configurare-raspbian-first-boot)
 
 1. Predisporre l'ambiente di sviluppo
 ---
-1. Scaricare l'ultima immagine di raspbian (vedi appendice)
-2. Seguire questa guida per rendere l'immagine avviabile con qemu [http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/](http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/)
-3. Impostare xorg per farlo andare a 800x600. Creare in file /etc/X11/xorg.conf e incollarci:
+* Scaricare l'ultima immagine di raspbian (vedi appendice)
+* Seguire questa guida per rendere l'immagine avviabile con qemu [http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/](http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/)
+* Impostare xorg per farlo andare a 800x600. Creare in file /etc/X11/xorg.conf e incollarci:
 ```
   Section "Screen"
   Identifier "Default Screen"
@@ -22,13 +22,13 @@ Coding for School
 ---
 Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti passi:
 
-1. Expand Filesystem
+* Expand Filesystem
   - Basta dare invio e riformatta la SD in modo da occuparla interamente
-2. Change User Password
+* Change User Password
   - Impostare una password per l'utente pi (es: ragno)
-3. Enable Boot to Desktop/Scratch
+* Enable Boot to Desktop/Scratch
   - Selezionare "Desktop Log in..."
-4. Internationalisation Options
+* Internationalisation Options
   - I1-Change Locale
       - [*]it_IT.UTF-8 UTF-8 default locale for system enviroment
   - I2-Change Timezone
@@ -37,40 +37,40 @@ Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti p
       - Generic 105-key (Intl) PC -> Other -> Italian -> Italian -> The default for
      the keyboard layout -> No compose key -> No
 Finish -> Yes
-5. Effettuare il reboot
+* Effettuare il reboot
 
 3. Personalizzare l'aspetto (second boot)
 ---
 ### Modifiche automatiche all'interfaccia
 
-1. Al primo boot aprire una sessione terminale
-2. Nella home (/home/pi) eseguire
+* Al primo boot aprire una sessione terminale
+* Nella home (/home/pi) eseguire
 ```
-  $ git clone https://github.com/UieLinux/coding-for-school-os
+$ git clone https://github.com/UieLinux/coding-for-school-os
 ```
-3. Andare nella cartella cooding-for-school-os
+* Andare nella cartella cooding-for-school-os
 ```
-  $ cd ./coding-for-school-os
+$ cd ./coding-for-school-os
 ```
-4. Diventare root:
+* Diventare root:
 ```
-  $ sudo -s
+$ sudo -s
 ```
-5. Installare i temi
+* Installare i temi
 ```
-  # ./install.sh
+# ./install.sh
 ```
 
 ### Modifiche manuali all'interfaccia
 
-1. Togliere l'icona screenlock (in basso a destra)
-2. Togliere l'icona cpu usage monitor
-3. In Panel Preference / Appearance, scegliere Solid theme
-4. In Panel Preference / Appearance, scegliere Font color #393939
-5. In Preferenze / Openbox Configuration Manager, scegliere il tema "coding-for-school"
-6. In Preferences / Customize Look and Feel, scegliere in Widget "coding-for-school"
-7. In Preferences / Customize Look and Feel, scegliere in Icon theme, £coding-for-school"
-8. Aggiornare il sistema e fare il reboot:
+* Togliere l'icona screenlock (in basso a destra)
+* Togliere l'icona cpu usage monitor
+* In Panel Preference / Appearance, scegliere Solid theme
+* In Panel Preference / Appearance, scegliere Font color #393939
+* In Preferenze / Openbox Configuration Manager, scegliere il tema "coding-for-school"
+* In Preferences / Customize Look and Feel, scegliere in Widget "coding-for-school"
+* In Preferences / Customize Look and Feel, scegliere in Icon theme, £coding-for-school"
+* Aggiornare il sistema e fare il reboot:
 ```
   $ sudo apt-get update && sudo apt-get upgrade
 ```
