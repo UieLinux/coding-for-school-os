@@ -7,15 +7,15 @@ fi
 
 echo "Copy icons pack..."
 rm -rf /usr/share/icons/coding-for-school
-cp -R ./cfs-ui/icons/coding-for-school/ /usr/share/icons/
+cp -R ./icons /usr/share/icons/coding-for-school/
 
 echo "Copy theme pack..."
 rm -rf /usr/share/themes/coding-for-school
-cp -R ./cfs-ui/themes/coding-for-school/ /usr/share/themes/
+cp -R ./theme /usr/share/themes/coding-for-school/
 
 echo "Copy artwork pack..."
 rm -rf /usr/share/coding-for-school
-cp -R ./cfs-ui/artwork/coding-for-school/* /usr/share/coding-for-school/
+cp -R ./artwork /usr/share/coding-for-school/
 
 echo "Set correct shutdown icon for panel"
 sed -i 's/gnome-logout/system-shutdown-panel/g' /usr/share/applications/lxde-logout.desktop 
@@ -50,18 +50,8 @@ rm -rf install_scratchgpio5.sh
 #wget http://goo.gl/T8cLSU -O isid6.sh
 #sudo bash isid6.sh
 
+echo "Restart panel"
+su -l pi -c "lxpanelctl restart"
+
 echo "done!\n"
 
-#echo "Install pavucontrol"
-#apt-get install -y pavucontrol
-echo "TODO"
-# ---------
-echo "Togliere l'icona screenlock dal pannello"
-echo "1. Tasto destro sull'icona"
-echo "2. Impostazioni pannello"
-echo "3. In scheda Applet pannello scegliere barra avvio applicazioni (ultima)"
-echo "4. Cliccare Modifica"
-echo "5. Rimuovere Screenlock"
-echo "6. Rimuovere Workspace selector"
-
-su -l pi -c "lxpanelctl restart"
