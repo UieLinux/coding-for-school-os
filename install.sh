@@ -20,6 +20,12 @@ cp -R ./cfs-ui/artwork/coding-for-school/* /usr/share/coding-for-school/
 echo "Set correct shutdown icon for panel"
 sed -i 's/gnome-logout/system-shutdown-panel/g' /usr/share/applications/lxde-logout.desktop 
 
+echo "Override lxde menu icon"
+cp -R /usr/share/coding-for-school/cfs-start-menu.png /usr/share/lxde/images/lxde-icon.png
+
+echo "Override logout lxde banner"
+cp -R /usr/share/coding-for-school/cfs-logout-banner.png /usr/share/lxde/images/logout-banner.png
+
 echo "Remove desktop icons"
 rm -f /home/pi/Desktop/debian-reference-common.desktop
 rm -f /home/pi/Desktop/idle*
@@ -32,7 +38,9 @@ rm -f /home/pi/Desktop/ocr_resources.desktop
 rm -f /home/pi/Desktop/epiphany-browser.desktop 
 
 echo "Setting wallpaper" 
-su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/wallpapers/cfs-wallpaper.png"
+su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/cfs-wallpaper.png"
+
+echo "done!\n"
 
 #echo "Install pavucontrol"
 #apt-get install -y pavucontrol
