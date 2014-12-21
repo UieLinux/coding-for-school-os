@@ -5,11 +5,11 @@ Installare Raspbian su SD
 ---
 1. Scaricare l'ultima versione di raspbian:
 ```
-$ wget http://downloads.raspberrypi.org/raspbian_latest
+  $ wget http://downloads.raspberrypi.org/raspbian_latest
 ```
 - Inserire l'SD nel computer ed eseguire:
 ```
-# unzip -p 201X-XX-XX-wheezy-raspbian.zip | dd of=/dev/sdX bs=4M
+  # unzip -p 201X-XX-XX-wheezy-raspbian.zip | dd of=/dev/sdX bs=4M
 ```
 
 Predisporre l'ambiente di sviluppo
@@ -18,13 +18,13 @@ Predisporre l'ambiente di sviluppo
 - Seguire questa guida per rendere l'immagine avviabile con qemu [http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/](http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/)
 - Impostare xorg per farlo andare a 800x600. Creare in file /etc/X11/xorg.conf e incollarci:
 ```
-Section "Screen"
-Identifier "Default Screen"
-SubSection "Display"
-Depth 16
-Modes "800x600" "640x480"
-EndSubSection
-EndSection
+  Section "Screen"
+  Identifier "Default Screen"
+  SubSection "Display"
+  Depth 16
+  Modes "800x600" "640x480"
+  EndSubSection
+  EndSection
 ```
 
 
@@ -56,19 +56,19 @@ Personalizzare l'aspetto (Second boot)
 1. Al primo boot aprire una sessione terminale
 - Nella home (/home/pi) eseguire
 ```
-$ git clone https://github.com/UieLinux/coding-for-school-os
+  $ git clone https://github.com/UieLinux/coding-for-school-os
 ```
 - Andare nella cartella cooding-for-school-os
 ```
-$ cd ./coding-for-school-os
+  $ cd ./coding-for-school-os
 ```
 - Diventare root:
 ```
-$ sudo -s
+  $ sudo -s
 ```
 - Installare i temi
 ```
-# ./install.sh
+  # ./install.sh
 ```
 
 ### Modifiche manuali all'interfaccia
@@ -82,7 +82,7 @@ $ sudo -s
 - In Preferences / Customize Look and Feel, scegliere in Icon theme, coding-for-school
 - Aggiornare il sistema e fare il reboot:
 ```
-$ sudo apt-get update && sudo apt-get upgrade
+  $ sudo apt-get update && sudo apt-get upgrade
 ```
 - Svuotare il cestino
 
