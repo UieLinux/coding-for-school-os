@@ -41,9 +41,13 @@ echo "Setting wallpaper"
 su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/cfs-wallpaper.png"
 
 echo "Install scratch GPIO"
+# Note: https://pihw.wordpress.com/lessons/rgb-led-lessons/rgb-led-lesson-2-scratch-gpio-getting-started/
 cd /home/pi
-wget http://goo.gl/T8cLSU -O isid6.sh
-sudo bash isid6.sh
+wget http://goo.gl/Pthh62 –O install_scratchgpio5.sh
+sudo bash install_scratchgpio5.sh
+
+#wget http://goo.gl/T8cLSU -O isid6.sh
+#sudo bash isid6.sh
 
 echo "done!\n"
 
@@ -59,4 +63,4 @@ echo "4. Cliccare Modifica"
 echo "5. Rimuovere Screenlock"
 echo "6. Rimuovere Workspace selector"
 
-lxpanel restart
+su -l pi -c "lxpanelctl restart"
