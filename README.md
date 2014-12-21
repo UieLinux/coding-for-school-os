@@ -74,17 +74,17 @@ Personalizzare l'aspetto (second boot)
 ### Modifiche manuali all'interfaccia
 
 1. Togliere l'icona screenlock (in basso a destra)
-- Togliere l'icona cpu usage monitor
-- In Panel Preference / Appearance, scegliere Solid theme
-- In Panel Preference / Appearance, scegliere Font color #393939
-- In Preferenze / Openbox Configuration Manager, scegliere il tema "coding-for-school"
-- In Preferences / Customize Look and Feel, scegliere in Widget "coding-for-school"
-- In Preferences / Customize Look and Feel, scegliere in Icon theme, £coding-for-school"
-- Aggiornare il sistema e fare il reboot:
+2. Togliere l'icona cpu usage monitor
+3. In Panel Preference / Appearance, scegliere Solid theme
+4. In Panel Preference / Appearance, scegliere Font color #393939
+5. In Preferenze / Openbox Configuration Manager, scegliere il tema "coding-for-school"
+6. In Preferences / Customize Look and Feel, scegliere in Widget "coding-for-school"
+7. In Preferences / Customize Look and Feel, scegliere in Icon theme, £coding-for-school"
+8. Aggiornare il sistema e fare il reboot:
 ```
   $ sudo apt-get update && sudo apt-get upgrade
 ```
-- Svuotare il cestino
+9. Svuotare il cestino
 
 Note:
 ---
