@@ -1,20 +1,9 @@
 Coding for School
 ===
 
-Installare Raspbian su SD
+1. Predisporre l'ambiente di sviluppo
 ---
-1. Scaricare l'ultima versione di raspbian:
-```
-  $ wget http://downloads.raspberrypi.org/raspbian_latest
-```
-2. Inserire l'SD nel computer ed eseguire:
-```
-  # unzip -p 201X-XX-XX-wheezy-raspbian.zip | dd of=/dev/sdX bs=4M
-```
-
-Predisporre l'ambiente di sviluppo
----
-1. Scaricare l'ultima immagine di raspbian (vedi sopra)
+1. Scaricare l'ultima immagine di raspbian (vedi appendice)
 2. Seguire questa guida per rendere l'immagine avviabile con qemu [http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/](http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/)
 3. Impostare xorg per farlo andare a 800x600. Creare in file /etc/X11/xorg.conf e incollarci:
 ```
@@ -27,8 +16,7 @@ Predisporre l'ambiente di sviluppo
   EndSection
 ```
 
-
-Configurare Raspbian (first boot)
+2. Configurare Raspbian (first boot)
 ---
 Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti passi:
 
@@ -49,7 +37,7 @@ Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti p
 Finish -> Yes
 5. Effettuare il reboot
 
-Personalizzare l'aspetto (second boot)
+3. Personalizzare l'aspetto (second boot)
 ---
 ### Modifiche automatiche all'interfaccia
 
@@ -86,8 +74,44 @@ Personalizzare l'aspetto (second boot)
 ```
 9. Svuotare il cestino
 
-Note:
+4. Appendice
 ---
+### Installare Raspbian su SD
+
+1. Scaricare l'ultima versione di raspbian:
+```
+  $ wget http://downloads.raspberrypi.org/raspbian_latest
+```
+2. Inserire l'SD nel computer ed eseguire:
+```
+  # unzip -p 201X-XX-XX-wheezy-raspbian.zip | dd of=/dev/sdX bs=4M
+```
+
+### Elenco icone di default sul desktop
+
+- shutdown		-Accesso rapido allo spegnimento
+- IDLE			-IDLE di python 2.7.X	
+- OCR Resources		-http://www.ocr.org.uk/qualifications/by-subject/computing/raspberry-pi/
+- Scratch		-Programmazione visuale
+- Minecraft Pi		-Giovo 3D
+- Sonic Pi		-Programmazione visuale
+- LXTerminal		-Terminale grafico per LXDE
+- Browser Epiphany	-Browser in gtk
+- Mathematica		-Calcolo computazionale, varie ed eventuali(http://www.wolfram.com/mathematica)
+- Python Games		-Giochini tipo "forza 4" in python
+- La guida Debian	-Doc debian locale in Inglese
+- WiFi Config		-Strumento di configurazione del wifi
+- IDLE 3			-IDLE di python 3.x
+- Pi Store		-Software store della raspberry
+- Wolfram		-IDE di wolfram (http://www.wolfram.com/raspberry-pi/)
+
+### Icone rimanenti
+
+- Scratch
+- Wifi config		-Cambiando nome all'icona
+
+### Note:
+
 1. Vedere se è il caso di eliminare alcuni programmi invece di togliere solo le icone dal desktop
 - Pensare bene a che programmi e link aggiungere, tra cui alcune idee:
   - [owncloud](http://owncloud.org/)
@@ -95,7 +119,7 @@ Note:
   - [Kano pong](http://www.codecademy.com/courses/kano-pong/0/1)
   - [kids Ruby](http://kidsruby.com)
 
-Risorse
+5. Risorse
 --- 
 * http://www.linux-mitterteich.de/fileadmin/datafile/papers/2013/qemu_raspiemu_lug_18_sep_2013.pdf
 * https://github.com/cymplecy/scratch_gpio
