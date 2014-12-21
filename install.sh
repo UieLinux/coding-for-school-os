@@ -53,3 +53,4 @@ echo "4. Cliccare Modifica"
 echo "5. Rimuovere Screenlock"
 echo "6. Rimuovere Workspace selector"
 
+lxpanel restart
