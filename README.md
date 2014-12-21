@@ -54,19 +54,19 @@ Personalizzare l'aspetto (second boot)
 ### Modifiche automatiche all'interfaccia
 
 1. Al primo boot aprire una sessione terminale
-- Nella home (/home/pi) eseguire
+2. Nella home (/home/pi) eseguire
 ```
   $ git clone https://github.com/UieLinux/coding-for-school-os
 ```
-- Andare nella cartella cooding-for-school-os
+3. Andare nella cartella cooding-for-school-os
 ```
   $ cd ./coding-for-school-os
 ```
-- Diventare root:
+4. Diventare root:
 ```
   $ sudo -s
 ```
-- Installare i temi
+5. Installare i temi
 ```
   # ./install.sh
 ```
