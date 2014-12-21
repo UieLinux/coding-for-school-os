@@ -1,7 +1,5 @@
 Coding for School
 ===
-* [Predisporre l'ambiente di sviluppo](README.md#1-predisporre-lambiente-di-sviluppo)
-* [Configurare raspbian](README.md#2-configurare-raspbian-first-boot)
 
 1. Predisporre l'ambiente di sviluppo
 ---
