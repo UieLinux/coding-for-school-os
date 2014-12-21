@@ -44,19 +44,19 @@ Finish -> Yes
 * Al primo boot aprire una sessione terminale
 * Nella home (/home/pi) eseguire
 ```
-$ git clone https://github.com/UieLinux/coding-for-school-os
+  $ git clone https://github.com/UieLinux/coding-for-school-os
 ```
 * Andare nella cartella cooding-for-school-os
 ```
-$ cd ./coding-for-school-os
+  $ cd ./coding-for-school-os
 ```
 * Diventare root:
 ```
-$ sudo -s
+  $ sudo -s
 ```
 * Installare i temi
 ```
-# ./install.sh
+  # ./install.sh
 ```
 
 ### Modifiche manuali all'interfaccia
@@ -67,7 +67,7 @@ $ sudo -s
 * In Panel Preference / Appearance, scegliere Font color #393939
 * In Preferenze / Openbox Configuration Manager, scegliere il tema "coding-for-school"
 * In Preferences / Customize Look and Feel, scegliere in Widget "coding-for-school"
-* In Preferences / Customize Look and Feel, scegliere in Icon theme, £coding-for-school"
+* In Preferences / Customize Look and Feel, scegliere in Icon theme, "coding-for-school"
 * Aggiornare il sistema e fare il reboot:
 ```
   $ sudo apt-get update && sudo apt-get upgrade
