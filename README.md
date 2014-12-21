@@ -49,7 +49,7 @@ Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti p
 Finish -> Yes
 5. Effettuare il reboot
 
-Personalizzare l'aspetto (Second boot)
+Personalizzare l'aspetto (second boot)
 ---
 ### Modifiche automatiche all'interfaccia
 
@@ -79,7 +79,7 @@ Personalizzare l'aspetto (Second boot)
 - In Panel Preference / Appearance, scegliere Font color #393939
 - In Preferenze / Openbox Configuration Manager, scegliere il tema "coding-for-school"
 - In Preferences / Customize Look and Feel, scegliere in Widget "coding-for-school"
-- In Preferences / Customize Look and Feel, scegliere in Icon theme, coding-for-school
+- In Preferences / Customize Look and Feel, scegliere in Icon theme, £coding-for-school"
 - Aggiornare il sistema e fare il reboot:
 ```
   $ sudo apt-get update && sudo apt-get upgrade
@@ -90,7 +90,7 @@ Note:
 ---
 1. Vedere se è il caso di eliminare alcuni programmi invece di togliere solo le icone dal desktop
 -. Pensare bene a che programmi e link aggiungere, tra cui alcune idee:
-  - Client [owncloud](http://owncloud.org/)
+  - [owncloud](http://owncloud.org/)
   - [blockly](https://code.google.com/p/blockly/)
   - [Kano pong](http://www.codecademy.com/courses/kano-pong/0/1)
   - [kids Ruby](http://kidsruby.com)
