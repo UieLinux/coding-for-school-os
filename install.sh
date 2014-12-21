@@ -41,6 +41,7 @@ echo "Setting wallpaper"
 su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/cfs-wallpaper.png"
 
 echo "Install scratch GPIO"
+cd /home/pi
 wget http://goo.gl/T8cLSU -O isid6.sh
 sudo bash isid6.sh
 
