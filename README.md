@@ -1,6 +1,8 @@
 Coding for School
 ===
 
+1. (https://github.com/UieLinux/coding-for-school-os/blob/master/README.md#2-configurare-raspbian-first-boot)[Configurare raspbian]
+
 1. Predisporre l'ambiente di sviluppo
 ---
 1. Scaricare l'ultima immagine di raspbian (vedi appendice)
