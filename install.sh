@@ -43,7 +43,7 @@ su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/cfs-wallpaper.
 echo "Install scratch GPIO"
 # Note: https://pihw.wordpress.com/lessons/rgb-led-lessons/rgb-led-lesson-2-scratch-gpio-getting-started/
 cd /home/pi
-wget http://goo.gl/Pthh62 –O install_scratchgpio5.sh
+wget http://goo.gl/Pthh62 -O install_scratchgpio5.sh
 bash install_scratchgpio5.sh
 rm -rf install_scratchgpio5.sh
 
