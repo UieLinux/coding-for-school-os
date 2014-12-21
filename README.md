@@ -15,13 +15,8 @@ $ wget http://downloads.raspberrypi.org/raspbian_latest
 Predisporre l'ambiente di sviluppo
 ---
 1. Scaricare l'ultima immagine di raspbian (vedi sopra)
-- Seguire questa guida per rendere l'immagine avviabile con qemu
-```
-[http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/](http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/)
-```
-
+- Seguire questa guida per rendere l'immagine avviabile con qemu [http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/](http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/)
 - Impostare xorg per farlo andare a 800x600. Creare in file /etc/X11/xorg.conf e incollarci:
-
 ```
 Section "Screen"
 Identifier "Default Screen"
