@@ -16,7 +16,7 @@ Coding for School
   EndSection
 ```
 
-2. Configurare Raspbian (first boot)
+2. Configurare iniziale (first boot)
 ---
 Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti passi:
 
