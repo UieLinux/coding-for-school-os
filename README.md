@@ -16,7 +16,7 @@ Coding for School
   EndSection
 ```
 
-2. Configurare iniziale (first boot)
+2. Configurare iniziale
 ---
 Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti passi:
 
@@ -37,7 +37,7 @@ Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti p
 Finish -> Yes
 * Effettuare il reboot
 
-3. Personalizzare l'aspetto (second boot)
+3. Personalizzazione interfaccia
 ---
 ### Modifiche automatiche all'interfaccia
 
