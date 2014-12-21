@@ -46,9 +46,9 @@ Finish -> Yes
 ```
   $ git clone https://github.com/UieLinux/coding-for-school-os
 ```
-* Andare nella cartella cooding-for-school-os
+* Andare nella cartella cfs-ui
 ```
-  $ cd ./coding-for-school-os
+  $ cd ./coding-for-school-os/cfs-ui
 ```
 * Diventare root:
 ```
