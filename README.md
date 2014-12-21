@@ -1,7 +1,7 @@
 Coding for School
 ===
 
-1. [Configurare raspbian](https://github.com/UieLinux/coding-for-school-os/blob/master/README.md#2-configurare-raspbian-first-boot)
+1. [Configurare raspbian](README.md#2-configurare-raspbian-first-boot)
 
 1. Predisporre l'ambiente di sviluppo
 ---
