@@ -40,11 +40,16 @@ rm -f /home/pi/Desktop/epiphany-browser.desktop
 echo "Setting wallpaper" 
 su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/cfs-wallpaper.png"
 
+echo "Install scratch GPIO"
+wget http://goo.gl/T8cLSU -O isid6.sh
+sudo bash isid6.sh
+
 echo "done!\n"
 
 #echo "Install pavucontrol"
 #apt-get install -y pavucontrol
-
+echo "TODO"
+# ---------
 echo "Togliere l'icona screenlock dal pannello"
 echo "1. Tasto destro sull'icona"
 echo "2. Impostazioni pannello"
