@@ -94,16 +94,16 @@ Alcune modifiche all'interfaccia non sono ancora state riportate nello script di
 ---
 ### Installare Raspbian su SD
 
-1. Scaricare l'ultima versione di raspbian:
+* Scaricare l'ultima versione di raspbian:
 ```
   $ wget http://downloads.raspberrypi.org/raspbian_latest
 ```
-2. Inserire l'SD nel computer ed eseguire:
+* Inserire l'SD nel computer ed eseguire:
 ```
   # unzip -p 201X-XX-XX-wheezy-raspbian.zip | dd of=/dev/sdX bs=4M
 ```
 
-### Elenco icone di default sul desktop
+### Elenco icone di default sul desktop di Raspbian
 
 - shutdown		-Accesso rapido allo spegnimento
 - IDLE			-IDLE di python 2.7.X	
