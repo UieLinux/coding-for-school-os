@@ -109,7 +109,7 @@ TODO
 
 ### Elenco icone di default sul desktop di Raspbian
 
-- shutdown		-Accesso rapido allo spegnimento
+- Shutdown		-Accesso rapido allo spegnimento
 - IDLE			-IDLE di python 2.7.X	
 - OCR Resources		-http://www.ocr.org.uk/qualifications/by-subject/computing/raspberry-pi/
 - Scratch		-Programmazione visuale
@@ -132,8 +132,8 @@ TODO
 
 ### Note:
 
-1. Vedere se è il caso di eliminare alcuni programmi invece di togliere solo le icone dal desktop
-- Pensare bene a che programmi e link aggiungere, tra cui alcune idee:
+* Valutare se è il caso di eliminare alcuni programmi invece di togliere solo le icone dal desktop
+* Valutare quali programmi e link aggiungere, tra cui alcune idee:
   - [owncloud](http://owncloud.org/)
   - [blockly](https://code.google.com/p/blockly/)
   - [Kano pong](http://www.codecademy.com/courses/kano-pong/0/1)
