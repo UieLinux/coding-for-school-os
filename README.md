@@ -90,7 +90,11 @@ Alcune modifiche all'interfaccia non sono ancora state riportate nello script di
 ```
 * Svuotare il cestino
 
-5. Appendice
+5. Creare l'immagine finale di CFS-OS
+---
+TODO
+
+6. Appendice
 ---
 ### Installare Raspbian su SD
 
