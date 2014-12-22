@@ -54,7 +54,6 @@ Finish -> Yes
 
 3. Personalizzazione interfaccia
 ---
-### Modifiche automatiche all'interfaccia
 
 * Al primo boot aprire una sessione terminale
 * Nella home (/home/pi) eseguire
@@ -74,7 +73,9 @@ Finish -> Yes
   # ./install.sh
 ```
 
-### Modifiche manuali all'interfaccia
+4. Modifiche da effettuare manualmente
+---
+Alcune modifiche all'interfaccia non sono ancora state riportate nello script di installazione. Per ora tali modifiche sono da effettuare manualmente, e sono:
 
 * Togliere l'icona screenlock (in basso a destra)
 * Togliere l'icona cpu usage monitor
@@ -87,9 +88,9 @@ Finish -> Yes
 ```
   $ sudo apt-get update && sudo apt-get upgrade
 ```
-9. Svuotare il cestino
+* Svuotare il cestino
 
-4. Appendice
+5. Appendice
 ---
 ### Installare Raspbian su SD
 
