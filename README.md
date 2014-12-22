@@ -1,4 +1,4 @@
-Coding for School OK
+Coding for School OS
 ===
 Coding for school OS, per gli amici CFS-OS, è basata sulla distribuzione [Raspbian](http://www.raspbian.org) per [Raspberry PI](http://www.raspberrypi.org).
 La personalizzazione consiste in 4 punti fondamentali:
