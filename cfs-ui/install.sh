@@ -35,7 +35,9 @@ rm -f /home/pi/Desktop/minecraft-pi.desktop
 rm -f /home/pi/Desktop/lxterminal.desktop 
 rm -f /home/pi/Desktop/wolfram-*
 rm -f /home/pi/Desktop/ocr_resources.desktop
-rm -f /home/pi/Desktop/epiphany-browser.desktop 
+rm -f /home/pi/Desktop/epiphany-browser.desktop
+rm -f /home/pi/Desktop/pistore.desktop
+rm -f /home/pi/Desktop/sonic-pi.desktop
 
 echo "Setting wallpaper" 
 su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/cfs-wallpaper.png"
@@ -52,6 +54,14 @@ rm -rf install_scratchgpio5.sh
 
 echo "Restart panel"
 su -l pi -c "lxpanelctl restart"
+
+echo "Clean home directory"
+rm -f /home/pi/python_games
+rm -f /home/pi/ocr_pi.png
+
+echo "Clean Trash"
+rm -f /home/pi/.local/share/Trash/info/*
+rm -f /home/pi/.local/share/Trash/files/*
 
 echo "done!\n"
 

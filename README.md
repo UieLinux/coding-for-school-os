@@ -20,18 +20,20 @@ Ci sono 2 possibilità.
 
 Per eseguire la VM segure le seguenti indicazioni:
 
-* Scaricare l'ultima immagine di raspbian (vedi appendice)
-* Seguire questa guida per rendere l'immagine avviabile con qemu [http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/](http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/)
-* Impostare xorg per farlo andare a 800x600. Creare in file /etc/X11/xorg.conf e incollarci:
+* Scaricare l'ultima immagine di [raspbian](http://downloads.raspberrypi.org/raspbian_latest) ed estrarla: unzip 201X-XX-XX-wheezy-raspbian.zip
+* Scaricare il [kernel](http://xecdesign.com/downloads/linux-qemu/kernel-qemu) (oppure utilizzare quello nella cartella qemu-raspbian)
+* Eseguire lo script qemu-rasp-first-boot.sh (è nella cartella qemu-raspbian) assicurandosi che i percorsi dei file siano corretti
+* Al prompt dei comandi aprire il file /etc/ld.so.preload e commentare l'unica riga così: #/usr/lib/arm-linux-gnueabihf/libcofi_rpi.so
+* Creare il file /etc/udev/rules.d/90-qemu.rules con il seguente contenuto:
 ```
-  Section "Screen"
-  Identifier "Default Screen"
-  SubSection "Display"
-  Depth 16
-  Modes "800x600" "640x480"
-  EndSubSection
-  EndSection
+   KERNEL=="sda", SYMLINK+="mmcblk0"
+   KERNEL=="sda?", SYMLINK+="mmcblk0p%n"
+   KERNEL=="sda2", SYMLINK+="root"
 ```
+* Spegnere il sistema digitando exit
+* Eseguire script qemu-rasp.sh
+* Fonte: [http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/](http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/)
+
 
 2. Configurare iniziale
 ---
@@ -50,9 +52,18 @@ Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti p
       - Europe->Rome
   - I3-Change Keyboard Layout
       - Generic 105-key (Intl) PC -> Other -> Italian -> Italian -> The default for
-     the keyboard layout -> No compose key -> No
-Finish -> Yes
-* Effettuare il reboot
+     the keyboard layout -> No compose key -> Finish -> Yes
+* Impostare xorg per farlo andare a 800x600. Creare in file /etc/X11/xorg.conf e incollarci:
+```
+  Section "Screen"
+  Identifier "Default Screen"
+  SubSection "Display"
+  Depth 16
+  Modes "800x600" "640x480"
+  EndSubSection
+  EndSection
+```
+* Fare il reboot
 
 3. Personalizzazione interfaccia
 ---
@@ -81,16 +92,16 @@ Alcune modifiche all'interfaccia non sono ancora state riportate nello script di
 
 * Togliere l'icona screenlock (in basso a destra)
 * Togliere l'icona cpu usage monitor
-* In Panel Preference / Appearance, scegliere Solid theme
-* In Panel Preference / Appearance, scegliere Font color #393939
-* In Preferenze / Openbox Configuration Manager, scegliere il tema "coding-for-school"
-* In Preferences / Customize Look and Feel, scegliere in Widget "coding-for-school"
-* In Preferences / Customize Look and Feel, scegliere in Icon theme, "coding-for-school"
+* Tasto destro sul pannello / Impostazioni Pannello / Aspetto, scegliere Colore solido
+* Tasto destro sul pannello / Impostazioni Pannello / Carattere / Colore personalizzato / #393939
+* In Menu / Preferenze / Openbox Configuration Manager, scegliere in Tema -> "coding-for-school"
+* In Menu / Preference / Personalizza Aspetto e Stile, scegliere in Widget -> "coding-for-school"
+* In Menu / Preference / Personalizza Aspetto e Stile, scegliere in Tema di icone -> "coding-for-school"
 * Aggiornare il sistema e fare il reboot:
 ```
   $ sudo apt-get update && sudo apt-get upgrade
 ```
-* Svuotare il cestino
+* Cancellare la catella /home/pi/coding-for-school-os
 
 5. Creare l'immagine finale di CFS-OS
 ---
