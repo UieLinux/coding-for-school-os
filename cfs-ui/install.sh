@@ -49,6 +49,10 @@ wget http://goo.gl/Pthh62 -O install_scratchgpio5.sh
 bash install_scratchgpio5.sh
 rm -rf install_scratchgpio5.sh
 
+echo "Update Raspberry firmware"
+sudo apt-get -y install rpi-update
+rpi-update
+
 #wget http://goo.gl/T8cLSU -O isid6.sh
 #sudo bash isid6.sh
 
