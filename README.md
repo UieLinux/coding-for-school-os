@@ -90,10 +90,14 @@ Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti p
 ---
 Alcune modifiche all'interfaccia non sono ancora state riportate nello script di installazione. Per ora tali modifiche sono da effettuare manualmente, e sono:
 
-* Togliere l'icona screenlock (in basso a destra)
-* Togliere l'icona cpu usage monitor
-* Tasto destro sul pannello / Impostazioni Pannello / Aspetto, scegliere Colore solido
-* Tasto destro sul pannello / Impostazioni Pannello / Carattere / Colore personalizzato / #393939
+* Tasto destro sul pannello / Impostazioni Pannello
+   * In "Aspetto", "Sfondo" scegliere "Tema di sistema"
+   * In "Aspetto", "Carattere", "Colore personalizzato" cliccare il pulsante bianco
+      * In Nome colore impostare #393939
+   * In "Applet di pannello" scegliere "Pager scrivania" e cliccare "Rimuovi"
+   * In "Applet di pannello" scegliere "Monitoraggio CPU" e cliccare "Rimuovi"
+   * In "Applet di pannello" scegliere "Barra avvio applicazioni" e cliccare "Modifica"
+      * Nella finestra "Barra di avvio applicazioni", sulla sinistra, scegliere "Screenlock" e cliccare "Rimuovi"
 * In Menu / Preferenze / Openbox Configuration Manager, scegliere in Tema -> "coding-for-school"
 * In Menu / Preference / Personalizza Aspetto e Stile, scegliere in Widget -> "coding-for-school"
 * In Menu / Preference / Personalizza Aspetto e Stile, scegliere in Tema di icone -> "coding-for-school"
@@ -101,7 +105,7 @@ Alcune modifiche all'interfaccia non sono ancora state riportate nello script di
 ```
   $ sudo apt-get update && sudo apt-get upgrade
 ```
-* Cancellare la catella /home/pi/coding-for-school-os
+* Cancellare la cartella /home/pi/coding-for-school-os
 
 5. Creare l'immagine finale di CFS-OS
 ---
