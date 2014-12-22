@@ -10,7 +10,12 @@ La personalizzazione consiste in 4 punti fondamentali:
 
 1. Ambiente di sviluppo
 ---
-Per effettuare le personalizzazioni della distro di partenza di sono 2 modi. Il primo è quello di riportare tutte le modifiche su una installazione fatta su una raspberry. La seconda possibilità è quella di eseguire sul computer una macchina virtuale con qemu in emulazione.
+Per applicare le personalizzazioni, si parte dalla distro di partenza e si applicano le modifiche.
+Ci sono 2 possibilità.
+
+1. Riportare tutte le modifiche su una installazione fatta su una raspberry (vedi Appendice)
+2. Eseguire sul computer una macchina virtuale con qemu in emulazione.
+
 Per eseguire la VM segure le seguenti indicazioni:
 
 * Scaricare l'ultima immagine di raspbian (vedi appendice)
