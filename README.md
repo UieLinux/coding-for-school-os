@@ -1,8 +1,17 @@
-Coding for School
+Coding for School OK
 ===
+Coding for school OS, per gli amici CFS-OS, è una personalizzazione della distibuzione Raspbian per Raspberry PI. La personalizzazione consiste in 4 punti fondamentali:
 
-1. Predisporre l'ambiente di sviluppo
+1. Modifica dell'aspetto (Temi, Icone, ecc..)
+2. Installazione nuovi programmi
+3. Eliminazione programmi ritenuti inutili
+4. Ottimizzazione di sistema per migliorare le prestazioni 
+
+1. Ambiente di sviluppo
 ---
+Per effettuare le personalizzazioni della distro di partenza di sono 2 modi. Il primo è quello di riportare tutte le modifiche su una installazione fatta su una raspberry. La seconda possibilità è quella di eseguire sul computer una macchina virtuale con qemu in emulazione.
+Per eseguire la VM segure le seguenti indicazioni:
+
 * Scaricare l'ultima immagine di raspbian (vedi appendice)
 * Seguire questa guida per rendere l'immagine avviabile con qemu [http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/](http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/)
 * Impostare xorg per farlo andare a 800x600. Creare in file /etc/X11/xorg.conf e incollarci:
