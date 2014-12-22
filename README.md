@@ -8,6 +8,8 @@ La personalizzazione consiste in 4 punti fondamentali:
 3. Eliminazione programmi ritenuti inutili
 4. Ottimizzazione di sistema per migliorare le prestazioni 
 
+![Imgur](http://i.imgur.com/vFVXEB7.png?1)
+
 1. Ambiente di sviluppo
 ---
 Per applicare le personalizzazioni, si parte dalla distro di partenza e si applicano le modifiche.
