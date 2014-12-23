@@ -39,6 +39,9 @@ rm -f /home/pi/Desktop/epiphany-browser.desktop
 rm -f /home/pi/Desktop/pistore.desktop
 rm -f /home/pi/Desktop/sonic-pi.desktop
 
+echo "Remove screenlock & cpu monitor"
+patch -p1 /home/pi/.config/lxpanel/LXDE/panels/panel < ./patch/panel.diff
+
 echo "Setting wallpaper" 
 su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/cfs-wallpaper.png"
 
