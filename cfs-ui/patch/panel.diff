@@ -1,0 +1,23 @@
+--- panel	2014-12-22 17:44:22.577412086 +0100
++++ panel.mod	2014-12-22 17:44:18.217415879 +0100
+@@ -110,10 +110,6 @@
+ }
+ 
+ Plugin {
+-    type = cpu
+-}
+-
+-Plugin {
+     type = tray
+ }
+ 
+@@ -130,9 +126,6 @@
+     type = launchbar
+     Config {
+         Button {
+-            id=lxde-screenlock.desktop
+-        }
+-        Button {
+             id=lxde-logout.desktop
+         }
+     }
