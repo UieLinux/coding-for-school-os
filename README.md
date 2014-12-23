@@ -90,13 +90,13 @@ Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti p
 ---
 Alcune modifiche all'interfaccia non sono ancora state riportate nello script di installazione. Per ora tali modifiche sono da effettuare manualmente, e sono:
 
-* Tasto destro sul pannello / Impostazioni Pannello
-   * In "Aspetto", "Sfondo" scegliere "Tema di sistema"
-   * In "Aspetto", "Carattere", "Colore personalizzato" cliccare il pulsante bianco
-      * In Nome colore impostare #393939
-   * In "Applet di pannello" scegliere "Pager scrivania" e cliccare "Rimuovi"
-   * In "Applet di pannello" scegliere "Monitoraggio CPU" e cliccare "Rimuovi"
-   * In "Applet di pannello" scegliere "Barra avvio applicazioni" e cliccare "Modifica"
+* ~~Tasto destro sul pannello / Impostazioni Pannello~~
+   * ~~In "Aspetto", "Sfondo" scegliere "Tema di sistema"~~
+   * ~~In "Aspetto", "Carattere", "Colore personalizzato" cliccare il pulsante bianco~~
+      * ~~In Nome colore impostare #393939~~
+   * ~~In "Applet di pannello" scegliere "Pager scrivania" e cliccare "Rimuovi"~~
+   * ~~In "Applet di pannello" scegliere "Monitoraggio CPU" e cliccare "Rimuovi"~~
+   * ~~In "Applet di pannello" scegliere "Barra avvio applicazioni" e cliccare "Modifica"~~
       * ~~Nella finestra "Barra di avvio applicazioni", sulla sinistra, scegliere "Logout" e cliccare "Rimuovi"~~
       * ~~Nella finestra "Barra di avvio applicazioni", sulla sinistra, scegliere "Screenlock" e cliccare "Rimuovi"~~
 * In Menu / Preferenze / Openbox Configuration Manager, scegliere in Tema -> "coding-for-school"
