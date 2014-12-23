@@ -63,7 +63,7 @@ echo "Restart panel"
 su -l pi -c "lxpanelctl restart"
 
 echo "Clean home directory"
-rm -f /home/pi/python_games
+rm -rf /home/pi/python_games
 rm -f /home/pi/ocr_pi.png
 
 echo "Clean Trash"
