@@ -39,7 +39,7 @@ rm -f /home/pi/Desktop/epiphany-browser.desktop
 rm -f /home/pi/Desktop/pistore.desktop
 rm -f /home/pi/Desktop/sonic-pi.desktop
 
-echo "Remove screenlock & cpu monitor"
+echo "Setting LXDE panel"
 patch -p1 /home/pi/.config/lxpanel/LXDE/panels/panel < ./patch/panel.diff
 
 echo "Setting wallpaper" 
