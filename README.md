@@ -86,6 +86,11 @@ Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti p
   # ./install.sh
 ```
 
+* Reboot
+```
+  # reboot
+```
+
 4. Modifiche da effettuare manualmente
 ---
 Alcune modifiche all'interfaccia non sono ancora state riportate nello script di installazione. Per ora tali modifiche sono da effettuare manualmente, e sono:
@@ -111,7 +116,12 @@ Alcune modifiche all'interfaccia non sono ancora state riportate nello script di
 
 5. Creare l'immagine finale di CFS-OS
 ---
-TODO
+* Estraete la mSD card dalla Raspberrypi (da spenta) e inseritela in un lettore nel PC
+* Individuate la lettera assegnata al dispositivo con fdisk -l
+* Copiate l'immagine raw della mSD con dd:
+```
+  # dd if=/dev/sdX of=CFS-OS.img
+```
 
 6. Appendice
 ---
