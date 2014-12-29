@@ -52,6 +52,12 @@ wget http://goo.gl/Pthh62 -O install_scratchgpio5.sh
 bash install_scratchgpio5.sh
 rm -rf install_scratchgpio5.sh
 
+echo "Install WiringPI"
+rm -rf wiringPI
+git clone git://git.drogon.net/wiringPi
+cd wiringPi
+./build
+
 echo "Update Raspberry firmware"
 sudo apt-get -y install rpi-update
 rpi-update
