@@ -179,3 +179,9 @@ Alcune modifiche all'interfaccia non sono ancora state riportate nello script di
 * http://www.danielemeli.com/configurazione-iniziale-del-raspberry-pi/
 * https://www.safaribooksonline.com/library/view/raspberry-pi-hacks/9781449362737/ch01.html
 * https://github.com/raspberrypilearning
+* http://www.meccanismocomplesso.org/starting-raspberry-pi-introduction/
+* http://wiringpi.com/
+* http://pi4j.com/images/j8header-large.png
+* http://www.maffucci.it/2012/07/21/raspberry-pi-lezione-01-conosciamo-la-scheda/
+* http://blog.oscarliang.net/use-gpio-pins-on-raspberry-pi/
+* http://www.raspberrypi.org/forums/viewtopic.php?f=62&t=18832
