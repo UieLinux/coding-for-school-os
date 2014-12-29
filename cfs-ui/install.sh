@@ -38,6 +38,8 @@ rm -f /home/pi/Desktop/ocr_resources.desktop
 rm -f /home/pi/Desktop/epiphany-browser.desktop
 rm -f /home/pi/Desktop/pistore.desktop
 rm -f /home/pi/Desktop/sonic-pi.desktop
+rm -f /home/pi/Desktop/Scratch.desktop
+rm -f /home/pi/Desktop/ScratchGPIO5.desktop
 
 echo "Setting LXDE panel"
 patch -p1 /home/pi/.config/lxpanel/LXDE/panels/panel < ./patch/panel.diff
