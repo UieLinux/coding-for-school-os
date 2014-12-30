@@ -6,9 +6,8 @@ if [ $USER != "root" ]; then
 fi
 
 cd ./sources
-cp cfs-registration.sh /etc/init.d/cfs-registration
-chmod 777 /etc/init.d/cfs-registration
-update-rc.d /etc/init.d/cfs-registration default
+cp ./cfs-registration /etc/init.d
+update-rc.d cfs-registration defaults
 
 
 cd ..
