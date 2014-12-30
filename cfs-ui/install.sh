@@ -18,7 +18,7 @@ rm -rf /usr/share/coding-for-school
 cp -R ./artwork /usr/share/coding-for-school/
 
 echo "Set correct shutdown icon for panel"
-sed -i 's/gnome-logout/system-shutdown-panel/g' /usr/share/applications/lxde-logout.desktop 
+sed -i 's/gnome-logout/system-shutdown-panel/g' /usr/share/applications/lxde-logout.desktop
 
 echo "Override lxde menu icon"
 cp -R /usr/share/coding-for-school/cfs-start-menu.png /usr/share/lxde/images/lxde-icon.png
@@ -31,8 +31,8 @@ rm -f /home/pi/Desktop/debian-reference-common.desktop
 rm -f /home/pi/Desktop/idle*
 rm -f /home/pi/Desktop/shutdown.desktop
 rm -f /home/pi/Desktop/python-games.desktop
-rm -f /home/pi/Desktop/minecraft-pi.desktop 
-rm -f /home/pi/Desktop/lxterminal.desktop 
+rm -f /home/pi/Desktop/minecraft-pi.desktop
+rm -f /home/pi/Desktop/lxterminal.desktop
 rm -f /home/pi/Desktop/wolfram-*
 rm -f /home/pi/Desktop/ocr_resources.desktop
 rm -f /home/pi/Desktop/epiphany-browser.desktop
@@ -42,9 +42,9 @@ rm -f /home/pi/Desktop/scratch.desktop
 rm -f /home/pi/Desktop/scratchgpio5.desktop
 
 echo "Setting LXDE panel"
-patch -p1 /home/pi/.config/lxpanel/LXDE/panels/panel < ./patch/panel.diff
+patch -N -p1 /home/pi/.config/lxpanel/LXDE/panels/panel < ./patch/panel.diff
 
-echo "Setting wallpaper" 
+echo "Setting wallpaper"
 su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/cfs-wallpaper.png"
 
 echo "Install scratch GPIO"
