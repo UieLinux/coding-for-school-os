@@ -5,6 +5,17 @@ if [ $USER != "root" ]; then
    exit
 fi
 
+cd ./sources
+cp cfs-registration.sh /etc/init.d/cfs-registration
+chmod 777 /etc/init.d/cfs-registration
+update-rc.d /etc/init.d/cfs-registration default
+
+
+cd ..
+
+
+cd ./cfs-ui
+
 echo "Copy icons pack..."
 rm -rf /usr/share/icons/coding-for-school
 cp -R ./icons /usr/share/icons/coding-for-school/
