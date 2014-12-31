@@ -188,3 +188,4 @@ Alcune modifiche all'interfaccia non sono ancora state riportate nello script di
 * https://learn.adafruit.com/webide/installation
 * http://www.raspberrypi.org/forums/viewtopic.php?f=66&t=18207
 * http://www.emcu.it/RaspBerryPi/RaspBerryPi.html
+* https://learn.sparkfun.com/tutorials/raspberry-gpio
