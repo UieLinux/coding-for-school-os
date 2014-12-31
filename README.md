@@ -125,7 +125,7 @@ Alcune modifiche all'interfaccia non sono ancora state riportate nello script di
 
 6. Appendice
 ---
-### Installare Raspbian su SD
+### Installare Raspbian su microSD
 
 * Scaricare l'ultima versione di raspbian:
 ```
