@@ -190,3 +190,4 @@ Alcune modifiche all'interfaccia non sono ancora state riportate nello script di
 * http://www.emcu.it/RaspBerryPi/RaspBerryPi.html
 * https://learn.sparkfun.com/tutorials/raspberry-gpio
 * http://www.mauroalfieri.it/elettronica/webiopi-raspberry-controllo-remoto-gpio.html
+* http://www.vincenzov.net/tutorial/RaspberryPi/
