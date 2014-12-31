@@ -185,3 +185,4 @@ Alcune modifiche all'interfaccia non sono ancora state riportate nello script di
 * http://www.maffucci.it/2012/07/21/raspberry-pi-lezione-01-conosciamo-la-scheda/
 * http://blog.oscarliang.net/use-gpio-pins-on-raspberry-pi/
 * http://www.raspberrypi.org/forums/viewtopic.php?f=62&t=18832
+* https://learn.adafruit.com/webide/installation
