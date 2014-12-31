@@ -13,28 +13,18 @@ SERIAL=$(cat /proc/cpuinfo | grep Serial | cut -d":" -f2 | tr -d ' ')
 MAC=$(cat /sys/class/net/eth0/address)
 REGISTRATION_SERVICE=https://coding-for-school-boards.herokuapp.com/register
 
-#. /lib/init/vars.sh
-#. /lib/lsb/init-functions
-
-
 case "$1" in
   start|"")
 	[ "$VERBOSE" = no ] || log_action_begin_msg "Registering to cfs board"
-	##
-	SERIAL=$RANDOM$RANDOM$RANDOM
 
 	if [ -z "$SERIAL" ]; then
 	  echo "CPU Serial not found. Using mac address"
 	  SERIAL=$MAC
 	fi
 
-	#curl -s $REGISTRATION_SERVICE/$SERIAL > /dev/null
-	curl -s $REGISTRATION_SERVICE/$SERIAL
+	curl -s $REGISTRATION_SERVICE/$SERIAL > /dev/null
+
 	ES=$?
-	##
-	ECHO "out ->"
-	ECHO $ES
-	ECHO "!DONE!"
 
 	[ "$VERBOSE" = no ] || log_action_end_msg $ES
 	;;
@@ -43,18 +33,13 @@ case "$1" in
 	# No-op
 	;;
 
-  restart|reload|force-reload)
+  restart|reload|force-reload|status)
 	echo "Error: argument '$1' not supported" >&2
 	exit 3
 	;;
 
-  status)
-	do_status
-	exit $?
-	;;
-
   *)
-	echo "Usage: cfs-registration [start|stop|status]" >&2
+	echo "Usage: cfs-registration [start|stop]" >&2
 	exit 3
 	;;
 
