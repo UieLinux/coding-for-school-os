@@ -82,6 +82,7 @@ rm -f /home/pi/Desktop/pistore.desktop
 rm -f /home/pi/Desktop/sonic-pi.desktop
 rm -f /home/pi/Desktop/scratch.desktop
 rm -f /home/pi/Desktop/scratchgpio5.desktop
+rm -r /home/pi/Scratch
 
 echo "Clean home directory"
 rm -rf /home/pi/python_games
