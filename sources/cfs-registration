@@ -1,6 +1,6 @@
 #!/bin/bash
 
-serial=$(cat /proc/cpuinfo | grep Serial | cut -d":" -f2)
+serial=$(cat /proc/cpuinfo | grep Serial | cut -d":" -f2 | tr -d ' ')
 mac=$(cat /sys/class/net/eth0/address)
 registration_service=https://coding-for-school-boards.herokuapp.com/register
 
