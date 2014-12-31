@@ -36,21 +36,6 @@ cp -R /usr/share/coding-for-school/cfs-start-menu.png /usr/share/lxde/images/lxd
 echo "Override logout lxde banner"
 cp -R /usr/share/coding-for-school/cfs-logout-banner.png /usr/share/lxde/images/logout-banner.png
 
-echo "Remove desktop icons"
-rm -f /home/pi/Desktop/debian-reference-common.desktop
-rm -f /home/pi/Desktop/idle*
-rm -f /home/pi/Desktop/shutdown.desktop
-rm -f /home/pi/Desktop/python-games.desktop
-rm -f /home/pi/Desktop/minecraft-pi.desktop
-rm -f /home/pi/Desktop/lxterminal.desktop
-rm -f /home/pi/Desktop/wolfram-*
-rm -f /home/pi/Desktop/ocr_resources.desktop
-rm -f /home/pi/Desktop/epiphany-browser.desktop
-rm -f /home/pi/Desktop/pistore.desktop
-rm -f /home/pi/Desktop/sonic-pi.desktop
-rm -f /home/pi/Desktop/scratch.desktop
-rm -f /home/pi/Desktop/scratchgpio5.desktop
-
 echo "Setting LXDE panel"
 patch -N -p1 /home/pi/.config/lxpanel/LXDE/panels/panel < ./patch/panel.diff
 
@@ -79,6 +64,21 @@ rpi-update
 
 echo "Restart panel"
 su -l pi -c "lxpanelctl restart"
+
+echo "Remove desktop icons"
+rm -f /home/pi/Desktop/debian-reference-common.desktop
+rm -f /home/pi/Desktop/idle*
+rm -f /home/pi/Desktop/shutdown.desktop
+rm -f /home/pi/Desktop/python-games.desktop
+rm -f /home/pi/Desktop/minecraft-pi.desktop
+rm -f /home/pi/Desktop/lxterminal.desktop
+rm -f /home/pi/Desktop/wolfram-*
+rm -f /home/pi/Desktop/ocr_resources.desktop
+rm -f /home/pi/Desktop/epiphany-browser.desktop
+rm -f /home/pi/Desktop/pistore.desktop
+rm -f /home/pi/Desktop/sonic-pi.desktop
+rm -f /home/pi/Desktop/scratch.desktop
+rm -f /home/pi/Desktop/scratchgpio5.desktop
 
 echo "Clean home directory"
 rm -rf /home/pi/python_games
