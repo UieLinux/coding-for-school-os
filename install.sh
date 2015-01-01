@@ -6,6 +6,9 @@ if [ $USER != "root" ]; then
 fi
 
 cd ./sources
+
+cp ./name_generator /usr/local/bin
+
 cp ./cfs-registration /etc/init.d
 update-rc.d cfs-registration defaults
 
