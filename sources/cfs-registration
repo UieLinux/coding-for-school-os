@@ -1,13 +1,48 @@
-#!/bin/bash
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          cfs-registration
+# Required-Start:    $network $local_fs $remote_fs $syslog
+# Required-Stop:
+# Default-Start:     2 3 4 5
+# Default-Stop:
+# Short-Description: Register your Raspy to cfs board.
+### END INIT INFO
 
-serial=$(cat /proc/cpuinfo | grep Serial | cut -d":" -f2 | tr -d ' ')
-mac=$(cat /sys/class/net/eth0/address)
-registration_service=https://coding-for-school-boards.herokuapp.com/register
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+SERIAL=$(cat /proc/cpuinfo | grep Serial | cut -d":" -f2 | tr -d ' ')
+MAC=$(cat /sys/class/net/eth0/address)
+REGISTRATION_SERVICE=https://coding-for-school-boards.herokuapp.com/register
 
-if [ -z "$serial" ]; then
-  echo "CPU Serial not found. Using mac address"
-  serial=$mac
-fi
+. /lib/lsb/init-functions
 
-curl -s $registration_service/$serial > /dev/null
+case "$1" in
+  start|"")
+	[ "$VERBOSE" = no ] || log_action_begin_msg "Registering to cfs board"
 
+	if [ -z "$SERIAL" ]; then
+	  echo "CPU Serial not found. Using mac address"
+	  SERIAL=$MAC
+	fi
+
+	curl -s $REGISTRATION_SERVICE/$SERIAL > /dev/null
+
+	ES=$?
+
+	[ "$VERBOSE" = no ] || log_action_end_msg $ES
+	;;
+
+  stop)
+	# No-op
+	;;
+
+  restart|reload|force-reload|status)
+	echo "Error: argument '$1' not supported" >&2
+	exit 3
+	;;
+
+  *)
+	echo "Usage: cfs-registration [start|stop]" >&2
+	exit 3
+	;;
+
+esac
