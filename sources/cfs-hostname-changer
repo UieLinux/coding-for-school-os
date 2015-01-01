@@ -1,0 +1,45 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          cfs-hostname-changer
+# Required-Start:    $network $local_fs $remote_fs $syslog
+# Required-Stop:
+# Default-Start:     2 3 4 5
+# Default-Stop:
+# Short-Description: Register your Raspy to cfs board.
+### END INIT INFO
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
+
+. /lib/lsb/init-functions
+
+case "$1" in
+  start|"")
+	[ "$VERBOSE" = no ] || log_action_begin_msg "Verify cfs hostname"
+
+	if [ $(hostname) = "raspberrypi" ]; then
+	   new_name=cfs-$(name_generator)
+	   echo "Try to change hostname to $new_name. You should reboot"
+	   sed -i 's/raspberrypi/$new_name/g' /etc/hostname
+	   /etc/init.d/hostname.sh
+	fi
+
+	ES=$?
+
+	[ "$VERBOSE" = no ] || log_action_end_msg $ES
+	;;
+
+  stop)
+	# No-op
+	;;
+
+  restart|reload|force-reload|status)
+	echo "Error: argument '$1' not supported" >&2
+	exit 3
+	;;
+
+  *)
+	echo "Usage: cfs-hostname-changer [start|stop]" >&2
+	exit 3
+	;;
+
+esac

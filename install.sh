@@ -6,12 +6,16 @@ if [ $USER != "root" ]; then
 fi
 
 cd ./sources
-chmod 777 ./name_generator
+chmod 755 ./name_generator
 cp ./name_generator /usr/local/bin
 
+chmod 755 cfs-registration
 cp ./cfs-registration /etc/init.d
 update-rc.d cfs-registration defaults
 
+chmod 755 cfs-hostname-changer
+cp ./cfs-hostname-changer /etc/init.d
+update-rc.d cfs-hostname-changer defaults
 
 cd ..
 
