@@ -21,6 +21,7 @@ case "$1" in
 	   echo "change it to $new_name."
 	   touch /tmp/cfs-need-reboot
 	   sed -i 's/raspberrypi/'${new_name}'/g' /etc/hostname
+	   sed -i 's/raspberrypi/'${new_name}'/g' /etc/hosts
 	   /etc/init.d/hostname.sh
 	fi
 
