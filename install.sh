@@ -6,7 +6,7 @@ if [ $USER != "root" ]; then
 fi
 
 cd ./sources
-
+chmod 777 ./name_generator
 cp ./name_generator /usr/local/bin
 
 cp ./cfs-registration /etc/init.d
