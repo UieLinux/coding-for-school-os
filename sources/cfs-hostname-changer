@@ -18,8 +18,9 @@ case "$1" in
 
 	if [ $(hostname) = "raspberrypi" ]; then
 	   new_name=cfs-$(name_generator)
-	   echo "Try to change hostname to $new_name. You should reboot"
-	   sed -i 's/raspberrypi/$new_name/g' /etc/hostname
+	   echo "change it to $new_name."
+	   touch /tmp/cfs-need-reboot
+	   sed -i 's/raspberrypi/'${new_name}'/g' /etc/hostname
 	   /etc/init.d/hostname.sh
 	fi
 
