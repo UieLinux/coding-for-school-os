@@ -73,6 +73,9 @@ apt-get -y install vim
 # Use avahi-discoverer on client to show devices list
 apt-get -y install avahi-daemon
 
+# Control of GPIO from LIRC
+apt-get -y install lirc liblircclient-dev
+
 #wget http://goo.gl/T8cLSU -O isid6.sh
 #sudo bash isid6.sh
 
