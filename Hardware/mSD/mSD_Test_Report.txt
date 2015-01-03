@@ -1,0 +1,17 @@
+Marca		Tipo	Classe	Test1*		Test2* 		Test3*	Costo	Negozio
+Kingston	SDC		4		 6,7		16,61		239,25	???
+Lexar		SDHC	10		 8,8		16,26		242,36	6,99	Mediaworld
+SanDisk		SDHC	10		12,7		18,15		242,76	9,99	MediaWorld
+Samsung		SDHC	10	
+
+Test1:
+Installazione Raspbian dal computer desktop con il comando:
+# unzip -p 2014-12-24-wheezy-raspbian.zip | dd of=/dev/sdg bs=4M
+
+Test2:
+Test su raspberrypi con il comando: hdparm -t /dev/mmcblk0
+la media del test ripetuto 3 volte 
+
+Test2:
+Test su raspberrypi con il comando: hdparm -t /dev/mmcblk0
+la media del test ripetuto 3 volte 

@@ -5,22 +5,21 @@ if [ $USER != "root" ]; then
    exit
 fi
 
+echo "Hostname generator installation..."
 cd ./sources
-chmod 755 ./name_generator
-cp ./name_generator /usr/local/bin
-
-chmod 755 cfs-registration
-cp ./cfs-registration /etc/init.d
+install -m 755 name_generator /usr/local/bin/
+install -m 755 cfs-registration /etc/init.d/
 update-rc.d cfs-registration defaults
-
-chmod 755 cfs-hostname-changer
-cp ./cfs-hostname-changer /etc/init.d
+install -m 755 cfs-hostname-changer /etc/init.d/
 update-rc.d cfs-hostname-changer defaults
 
 cd ..
-
-
 cd ./cfs-ui
+
+####################Code above revisioned##################
+#TODO put some where this:
+# echo "System update..."
+# apt-get update && apt-get upgrade
 
 echo "Copy icons pack..."
 rm -rf /usr/share/icons/coding-for-school
