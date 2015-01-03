@@ -22,7 +22,7 @@ cp -R theme /usr/share/themes/$CFS
 cp -R artwork /usr/share/$CFS
 
 echo "Custom pannel config installation..."
-cp -R config/ /home/pi/.config/
+cp -R config/LXDE-pi /home/pi/.config/lxpanel
 echo "Restart panel"
 su -l pi -c "lxpanelctl restart"
 
