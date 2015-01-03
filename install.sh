@@ -34,14 +34,14 @@ echo "Copy artwork pack..."
 rm -rf /usr/share/coding-for-school
 cp -R ./artwork /usr/share/coding-for-school/
 
-echo "Set correct shutdown icon for panel"
-sed -i 's/gnome-logout/system-shutdown-panel/g' /usr/share/applications/lxde-logout.desktop
+#echo "Set correct shutdown icon for panel"
+#sed -i 's/gnome-logout/system-shutdown-panel/g' /usr/share/applications/lxde-logout.desktop
 
 echo "Override lxde menu icon"
 cp -R /usr/share/coding-for-school/cfs-start-menu.png /usr/share/lxde/images/lxde-icon.png
 
-echo "Override logout lxde banner"
-cp -R /usr/share/coding-for-school/cfs-logout-banner.png /usr/share/lxde/images/logout-banner.png
+#echo "Override logout lxde banner"
+#cp -R /usr/share/coding-for-school/cfs-logout-banner.png /usr/share/lxde/images/logout-banner.png
 
 echo "Setting LXDE panel"
 patch -N -p1 /home/pi/.config/lxpanel/LXDE/panels/panel < ./patch/panel.diff
@@ -63,7 +63,7 @@ cd wiringPi
 ./build
 
 echo "Update Raspberry firmware"
-apt-get -y install rpi-update
+#apt-get -y install rpi-update
 rpi-update
 
 echo "Install other packages"
