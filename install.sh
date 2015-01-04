@@ -3,44 +3,51 @@
 if [ $USER != "root" ]; then
    echo "Devi sudare per essere root"
    exit
-fi
+
+CFS=coding-for-school
 
 echo "Hostname generator installation..."
-cd ./sources
+cd sources
 install -m 755 name_generator /usr/local/bin/
 install -m 755 cfs-registration /etc/init.d/
 update-rc.d cfs-registration defaults
 install -m 755 cfs-hostname-changer /etc/init.d/
 update-rc.d cfs-hostname-changer defaults
 
-cd ..
-cd ./cfs-ui
+echo "Artwork installation..."
+cd ../cfs-ui
+rm -rf /usr/share/{icons/$CFS,themes/$CFS,$CFS}
+cp -R icons /usr/share/$CFS
+cp -R theme /usr/share/themes/$CFS
+cp -R artwork /usr/share/$CFS
+
+echo "Custom pannel config installation..."
+cp -R config/LXDE-pi /home/pi/.config/lxpanel
+echo "Restart panel"
+su -l pi -c "lxpanelctl restart"
 
 ####################Code above revisioned##################
 #TODO put some where this:
 # echo "System update..."
 # apt-get update && apt-get upgrade
 
-echo "Copy icons pack..."
-rm -rf /usr/share/icons/coding-for-school
-cp -R ./icons /usr/share/icons/coding-for-school/
-
-echo "Copy theme pack..."
-rm -rf /usr/share/themes/coding-for-school
-cp -R ./theme /usr/share/themes/coding-for-school/
-
-echo "Copy artwork pack..."
-rm -rf /usr/share/coding-for-school
-cp -R ./artwork /usr/share/coding-for-school/
 
 #echo "Set correct shutdown icon for panel"
 #sed -i 's/gnome-logout/system-shutdown-panel/g' /usr/share/applications/lxde-logout.desktop
 
-echo "Override lxde menu icon"
-cp -R /usr/share/coding-for-school/cfs-start-menu.png /usr/share/lxde/images/lxde-icon.png
+#echo "Override lxde menu icon"
+#cp -R /usr/share/coding-for-school/cfs-start-menu.png /usr/share/lxde/images/lxde-icon.png
 
 #echo "Override logout lxde banner"
 #cp -R /usr/share/coding-for-school/cfs-logout-banner.png /usr/share/lxde/images/logout-banner.png
+
+
+
+
+
+
+
+
 
 echo "Setting LXDE panel"
 patch -N -p1 /home/pi/.config/lxpanel/LXDE/panels/panel < ./patch/panel.diff
@@ -78,8 +85,7 @@ apt-get -y install lirc liblircclient-dev
 #wget http://goo.gl/T8cLSU -O isid6.sh
 #sudo bash isid6.sh
 
-echo "Restart panel"
-su -l pi -c "lxpanelctl restart"
+
 
 echo "Remove desktop icons"
 rm -f /home/pi/Desktop/debian-reference-common.desktop
