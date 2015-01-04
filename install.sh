@@ -3,6 +3,7 @@
 if [ $USER != "root" ]; then
    echo "Devi sudare per essere root"
    exit
+fi
 
 CFS=coding-for-school
 
