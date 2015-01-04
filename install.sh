@@ -85,7 +85,8 @@ apt-get -y install lirc liblircclient-dev
 #wget http://goo.gl/T8cLSU -O isid6.sh
 #sudo bash isid6.sh
 
-
+# vnc server
+apt-get -y install tightvncserver
 
 echo "Remove desktop icons"
 rm -f /home/pi/Desktop/debian-reference-common.desktop
