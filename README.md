@@ -73,9 +73,9 @@ Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti p
 ```
   $ git clone https://github.com/UieLinux/coding-for-school-os
 ```
-* Andare nella cartella cfs-ui
+* Spostarsi nella cartella coding-for-school-os
 ```
-  $ cd ./coding-for-school-os/cfs-ui
+  $ cd ./coding-for-school-os
 ```
 * Diventare root:
 ```
