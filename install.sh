@@ -21,36 +21,11 @@ cp -R icons /usr/share/$CFS
 cp -R theme /usr/share/themes/$CFS
 cp -R artwork /usr/share/$CFS
 
-echo "Custom pannel config installation..."
-cp -R config/LXDE-pi /home/pi/.config/lxpanel
+echo "Custom panel config installation..."
+install -m 744 -o pi config/lxpanel/LXDE-pi/panels/panel \
+		/home/pi/.config/lxpanel/LXDE-pi/panels/		
 echo "Restart panel"
 su -l pi -c "lxpanelctl restart"
-
-####################Code above revisioned##################
-#TODO put some where this:
-# echo "System update..."
-# apt-get update && apt-get upgrade
-
-
-#echo "Set correct shutdown icon for panel"
-#sed -i 's/gnome-logout/system-shutdown-panel/g' /usr/share/applications/lxde-logout.desktop
-
-#echo "Override lxde menu icon"
-#cp -R /usr/share/coding-for-school/cfs-start-menu.png /usr/share/lxde/images/lxde-icon.png
-
-#echo "Override logout lxde banner"
-#cp -R /usr/share/coding-for-school/cfs-logout-banner.png /usr/share/lxde/images/logout-banner.png
-
-
-
-
-
-
-
-
-
-echo "Setting LXDE panel"
-patch -N -p1 /home/pi/.config/lxpanel/LXDE/panels/panel < ./patch/panel.diff
 
 echo "Setting wallpaper"
 su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/cfs-wallpaper.png"
@@ -68,11 +43,7 @@ git clone git://git.drogon.net/wiringPi
 cd wiringPi
 ./build
 
-echo "Update Raspberry firmware"
-#apt-get -y install rpi-update
-rpi-update
-
-echo "Install other packages"
+echo "Install development packages"
 apt-get -y install vim
 
 # Install bonjour service. 
@@ -81,35 +52,23 @@ apt-get -y install avahi-daemon
 
 # Control of GPIO from LIRC
 apt-get -y install lirc liblircclient-dev
-
 #wget http://goo.gl/T8cLSU -O isid6.sh
 #sudo bash isid6.sh
 
+echo "System update..."
+apt-get update && apt-get upgrade
 
-
-echo "Remove desktop icons"
-rm -f /home/pi/Desktop/debian-reference-common.desktop
-rm -f /home/pi/Desktop/idle*
-rm -f /home/pi/Desktop/shutdown.desktop
-rm -f /home/pi/Desktop/python-games.desktop
-rm -f /home/pi/Desktop/minecraft-pi.desktop
-rm -f /home/pi/Desktop/lxterminal.desktop
-rm -f /home/pi/Desktop/wolfram-*
-rm -f /home/pi/Desktop/ocr_resources.desktop
-rm -f /home/pi/Desktop/epiphany-browser.desktop
-rm -f /home/pi/Desktop/pistore.desktop
-rm -f /home/pi/Desktop/sonic-pi.desktop
-rm -f /home/pi/Desktop/scratch.desktop
-rm -f /home/pi/Desktop/scratchgpio5.desktop
-rm -rf /home/pi/Scratch
+echo "Update Raspberry firmware"
+#apt-get -y install rpi-update
+rpi-update
 
 echo "Clean home directory"
-rm -rf /home/pi/python_games
-rm -f /home/pi/ocr_pi.png
+#TODO gallochri: I think that python games folders can be left
+#rm -rf /home/pi/python_games
 
-echo "Clean Trash"
-rm -f /home/pi/.local/share/Trash/info/*
-rm -f /home/pi/.local/share/Trash/files/*
-
-echo "done!\n"
+read -t 10 -p "Hit ENTER or wait ten seconds for reboot"
+#Autodestruction
+rm -r /home/pi/$CFS-os
+echo "Rebooting system..."
+reboot
 
