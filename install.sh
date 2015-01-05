@@ -57,7 +57,7 @@ apt-get -y install lirc liblircclient-dev
 #sudo bash isid6.sh
 
 echo "System update..."
-apt-get update && apt-get upgrade
+apt-get update && apt-get upgrade -y
 
 echo "Update Raspberry firmware"
 #apt-get -y install rpi-update
@@ -70,5 +70,6 @@ echo "Clean home directory"
 #Self-destruction
 rm -r /home/pi/$CFS-os
 echo "Rebooting system..."
+sleep 5
 reboot
 
