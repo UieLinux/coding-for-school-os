@@ -32,7 +32,7 @@ echo "Setting wallpaper"
 su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/artwork/cfs-wallpaper.png"
 
 echo "Setting lxde theme..."
-install -m 744 -o pi config/openbox/lxde-pi-rc.xml \
+install -m 644 -o pi config/openbox/lxde-pi-rc.xml \
 		/home/pi/.config/openbox/lxde-pi-rc.xml
 		
 echo "Install scratch GPIO"

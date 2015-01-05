@@ -104,8 +104,8 @@ Alcune modifiche all'interfaccia non sono ancora state riportate nello script di
    * ~~In "Applet di pannello" scegliere "Barra avvio applicazioni" e cliccare "Modifica"~~
       * ~~Nella finestra "Barra di avvio applicazioni", sulla sinistra, scegliere "Logout" e cliccare "Rimuovi"~~
       * ~~Nella finestra "Barra di avvio applicazioni", sulla sinistra, scegliere "Screenlock" e cliccare "Rimuovi"~~
-* In Menu / Preferenze / Openbox Configuration Manager, scegliere in Tema -> "coding-for-school"
-* In Menu / Preferenze / Openbox Configuration Manager, scegliere Desktop e mettere 1 nel numero di desktop virtuali
+* ~~In Menu / Preferenze / Openbox Configuration Manager, scegliere in Tema -> "coding-for-school"~~
+* ~~In Menu / Preferenze / Openbox Configuration Manager, scegliere Desktop e mettere 1 nel numero di desktop virtuali~~
 * In Menu / Preference / Personalizza Aspetto e Stile, scegliere in Widget -> "coding-for-school"
 * In Menu / Preference / Personalizza Aspetto e Stile, scegliere in Tema di icone -> "coding-for-school"
 * Aggiornare il sistema e fare il reboot:

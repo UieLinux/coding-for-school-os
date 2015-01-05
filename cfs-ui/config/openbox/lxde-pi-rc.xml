@@ -37,7 +37,7 @@
     <primaryMonitor/>
   </placement>
   <theme>
-    <name>coding-for-schoolvim </name>
+    <name>coding-for-school</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
