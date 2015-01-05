@@ -17,20 +17,27 @@ update-rc.d cfs-hostname-changer defaults
 
 echo "Artwork installation..."
 cd ../cfs-ui
-rm -rf /usr/share/{icons/$CFS,themes/$CFS,$CFS}
-cp -R icons /usr/share/$CFS
+rm -rf /usr/share/icons/$CFS
+rm -rf /usr/share/themes/$CFS
+rm -rf /usr/share/$CFS
+
+cp -R icons /usr/share/icons/$CFS
 cp -R theme /usr/share/themes/$CFS
 cp -R artwork /usr/share/$CFS
 
 echo "Custom panel config installation..."
-install -m 744 -o pi config/lxpanel/LXDE-pi/panels/panel \
+install -m 644 -o pi config/lxpanel/LXDE-pi/panels/panel \
 		/home/pi/.config/lxpanel/LXDE-pi/panels/		
 echo "Restart panel"
 su -l pi -c "lxpanelctl restart"
 
 echo "Setting wallpaper"
-su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/artwork/cfs-wallpaper.png"
+su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/cfs-wallpaper.png"
 
+echo "Setting lxde theme..."
+install -m 644 -o pi config/openbox/lxde-pi-rc.xml \
+		/home/pi/.config/openbox/lxde-pi-rc.xml
+		
 echo "Install scratch GPIO"
 # Note: https://pihw.wordpress.com/lessons/rgb-led-lessons/rgb-led-lesson-2-scratch-gpio-getting-started/
 cd /home/pi
@@ -43,9 +50,6 @@ rm -rf wiringPI
 git clone git://git.drogon.net/wiringPi
 cd wiringPi
 ./build
-
-echo "Install development packages"
-apt-get -y install vim
 
 # Install bonjour service. 
 # Use avahi-discoverer on client to show devices list
