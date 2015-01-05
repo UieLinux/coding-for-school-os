@@ -31,6 +31,10 @@ su -l pi -c "lxpanelctl restart"
 echo "Setting wallpaper"
 su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/artwork/cfs-wallpaper.png"
 
+echo "Setting lxde theme..."
+install -m 744 -o pi config/openbox/lxde-pi-rc.xml \
+		/home/pi/.config/openbox/lxde-pi-rc.xml
+		
 echo "Install scratch GPIO"
 # Note: https://pihw.wordpress.com/lessons/rgb-led-lessons/rgb-led-lesson-2-scratch-gpio-getting-started/
 cd /home/pi
