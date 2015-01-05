@@ -7,7 +7,7 @@ Global {
   margin=0
   widthtype=percent
   width=100
-  height=36
+  height=24
   transparent=0
   tintcolor=#000000
   alpha=0
@@ -33,7 +33,7 @@ Plugin {
   type=menu
   Config {
     name=Menu
-    image=/usr/share/coding-for-school/artwork/cfs-start-menu.png
+    image=/usr/share/coding-for-school/cfs-start-menu.png
     system {
     }
     separator {
