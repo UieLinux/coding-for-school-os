@@ -35,7 +35,7 @@ Per eseguire la VM segure le seguenti indicazioni:
 * Fonte: [http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/](http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/)
 
 
-2. Configurazione iniziale
+2. Configurare iniziale
 ---
 Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti passi:
 
