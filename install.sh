@@ -17,13 +17,16 @@ update-rc.d cfs-hostname-changer defaults
 
 echo "Artwork installation..."
 cd ../cfs-ui
-rm -rf /usr/share/{icons/$CFS,themes/$CFS,$CFS}
-cp -R icons /usr/share/$CFS
+rm -rf /usr/share/icons/$CFS
+rm -rf /usr/share/themes/$CFS
+rm -rf /usr/share/$CFS
+
+cp -R icons /usr/share/icons/$CFS
 cp -R theme /usr/share/themes/$CFS
 cp -R artwork /usr/share/$CFS
 
 echo "Custom panel config installation..."
-install -m 744 -o pi config/lxpanel/LXDE-pi/panels/panel \
+install -m 644 -o pi config/lxpanel/LXDE-pi/panels/panel \
 		/home/pi/.config/lxpanel/LXDE-pi/panels/		
 echo "Restart panel"
 su -l pi -c "lxpanelctl restart"
