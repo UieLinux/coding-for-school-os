@@ -67,7 +67,6 @@ echo "Clean home directory"
 #TODO gallochri: I think that python games folders can be left
 #rm -rf /home/pi/python_games
 
-read -p "Hit ENTER for reboot"
 #Self-destruction
 rm -r /home/pi/$CFS-os
 echo "Rebooting system..."

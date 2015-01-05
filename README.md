@@ -35,7 +35,7 @@ Per eseguire la VM segure le seguenti indicazioni:
 * Fonte: [http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/](http://xecdesign.com/qemu-emulating-raspberry-pi-the-easy-way/)
 
 
-2. Configurare iniziale
+2. Configurazione iniziale
 ---
 Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti passi:
 
@@ -73,9 +73,9 @@ Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti p
 ```
   $ git clone https://github.com/UieLinux/coding-for-school-os
 ```
-* Andare nella cartella cfs-ui
+* Spostarsi nella cartella coding-for-school-os
 ```
-  $ cd ./coding-for-school-os/cfs-ui
+  $ cd ./coding-for-school-os
 ```
 * Diventare root:
 ```
