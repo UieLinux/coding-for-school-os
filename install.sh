@@ -51,9 +51,6 @@ git clone git://git.drogon.net/wiringPi
 cd wiringPi
 ./build
 
-echo "Install development packages"
-apt-get -y install vim
-
 # Install bonjour service. 
 # Use avahi-discoverer on client to show devices list
 apt-get -y install avahi-daemon
