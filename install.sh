@@ -29,7 +29,7 @@ echo "Restart panel"
 su -l pi -c "lxpanelctl restart"
 
 echo "Setting wallpaper"
-su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/cfs-wallpaper.png"
+su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/artwork/cfs-wallpaper.png"
 
 echo "Install scratch GPIO"
 # Note: https://pihw.wordpress.com/lessons/rgb-led-lessons/rgb-led-lesson-2-scratch-gpio-getting-started/
@@ -67,8 +67,8 @@ echo "Clean home directory"
 #TODO gallochri: I think that python games folders can be left
 #rm -rf /home/pi/python_games
 
-read -t 10 -p "Hit ENTER or wait ten seconds for reboot"
-#Autodestruction
+read -p "Hit ENTER for reboot"
+#Self-destruction
 rm -r /home/pi/$CFS-os
 echo "Rebooting system..."
 reboot

@@ -33,7 +33,7 @@ Plugin {
   type=menu
   Config {
     name=Menu
-    image=/usr/share/coding-for-school/cfs-start-menu.png
+    image=/usr/share/coding-for-school/artwork/cfs-start-menu.png
     system {
     }
     separator {
