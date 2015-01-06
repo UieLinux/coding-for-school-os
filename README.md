@@ -106,13 +106,8 @@ Alcune modifiche all'interfaccia non sono ancora state riportate nello script di
       * ~~Nella finestra "Barra di avvio applicazioni", sulla sinistra, scegliere "Screenlock" e cliccare "Rimuovi"~~
 * ~~In Menu / Preferenze / Openbox Configuration Manager, scegliere in Tema -> "coding-for-school"~~
 * ~~In Menu / Preferenze / Openbox Configuration Manager, scegliere Desktop e mettere 1 nel numero di desktop virtuali~~
-* In Menu / Preference / Personalizza Aspetto e Stile, scegliere in Widget -> "coding-for-school"
-* In Menu / Preference / Personalizza Aspetto e Stile, scegliere in Tema di icone -> "coding-for-school"
-* ~~Aggiornare il sistema e fare il reboot: ~~
-```
-  ~~ $ sudo apt-get update && sudo apt-get upgrade ~~
-```
-* ~~ Cancellare la cartella /home/pi/coding-for-school-os ~~
+* ~~In Menu / Preference / Personalizza Aspetto e Stile, scegliere in Widget -> "coding-for-school"~~
+* ~~In Menu / Preference / Personalizza Aspetto e Stile, scegliere in Tema di icone -> "coding-for-school"~~
 
 5. Creare l'immagine finale di CFS-OS
 ---
@@ -136,28 +131,14 @@ Alcune modifiche all'interfaccia non sono ancora state riportate nello script di
   # unzip -p 201X-XX-XX-wheezy-raspbian.zip | dd of=/dev/sdX bs=4M
 ```
 
-### ~~ Elenco icone di default sul desktop di Raspbian
+### Elenco icone di default sul desktop di Raspbian
 
-- Shutdown		-Accesso rapido allo spegnimento
-- IDLE			-IDLE di python 2.7.X	
-- OCR Resources		-http://www.ocr.org.uk/qualifications/by-subject/computing/raspberry-pi/
-- Scratch		-Programmazione visuale
-- Minecraft Pi		-Giovo 3D
-- Sonic Pi		-Programmazione visuale
-- LXTerminal		-Terminale grafico per LXDE
-- Browser Epiphany	-Browser in gtk
-- Mathematica		-Calcolo computazionale, varie ed eventuali(http://www.wolfram.com/mathematica)
-- Python Games		-Giochini tipo "forza 4" in python
-- La guida Debian	-Doc debian locale in Inglese
-- WiFi Config		-Strumento di configurazione del wifi
-- IDLE 3			-IDLE di python 3.x
-- Pi Store		-Software store della raspberry
-- Wolfram		-IDE di wolfram (http://www.wolfram.com/raspberry-pi/) ~~
+- Solo il cestino
 
-### ~~ Icone rimanenti
+### Icone rimanenti
 
 - Scratch
-- Wifi config		-Cambiando nome all'icona ~~
+- Cestino
 
 ### Note:
 
