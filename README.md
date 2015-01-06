@@ -86,14 +86,9 @@ Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti p
   # ./install.sh
 ```
 
-* Reboot
-```
-  # reboot
-```
-
-4. Modifiche da effettuare manualmente
+~~4. Modifiche da effettuare manualmente~~
 ---
-Alcune modifiche all'interfaccia non sono ancora state riportate nello script di installazione. Per ora tali modifiche sono da effettuare manualmente, e sono:
+~~Alcune modifiche all'interfaccia non sono ancora state riportate nello script di installazione. Per ora tali modifiche sono da effettuare manualmente, e sono:~~
 
 * ~~Tasto destro sul pannello / Impostazioni Pannello~~
    * ~~In "Aspetto", "Sfondo" scegliere "Tema di sistema"~~
@@ -116,6 +111,14 @@ Alcune modifiche all'interfaccia non sono ancora state riportate nello script di
 * Copiate l'immagine raw della mSD con dd:
 ```
   # dd if=/dev/sdX of=CFS-OS.img
+```
+* Comprimere l'immagine con 7z
+```
+  # 7z a CFS-OS.7z CFS-OS.img
+```
+* Installare l'immagine compressa su una nuova mSD card
+```
+  # 7z e -so CFS-OS.7z | dd of=/dev/sdX
 ```
 
 6. Appendice
