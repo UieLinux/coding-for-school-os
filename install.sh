@@ -37,6 +37,10 @@ su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/cfs-wallpaper.
 echo "Setting lxde theme..."
 install -m 644 -o pi config/openbox/lxde-pi-rc.xml \
 		/home/pi/.config/openbox/lxde-pi-rc.xml
+
+echo "Setting icon theme..."
+install -m 644 -o pi config/lxsession/LXDE-pi/desktop.conf \
+		/home/pi/.config/lxsession/LXDE-pi/desktop.conf
 		
 echo "Install scratch GPIO"
 # Note: https://pihw.wordpress.com/lessons/rgb-led-lessons/rgb-led-lesson-2-scratch-gpio-getting-started/
