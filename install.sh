@@ -39,6 +39,7 @@ install -m 644 -o pi config/openbox/lxde-pi-rc.xml \
 		/home/pi/.config/openbox/lxde-pi-rc.xml
 
 echo "Setting icon theme..."
+su -l pi -c "mkdir -p ~/.config/lxsession/LXDE-pi/"
 install -m 644 -o pi config/lxsession/LXDE-pi/desktop.conf \
 		/home/pi/.config/lxsession/LXDE-pi/desktop.conf
 		
