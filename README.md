@@ -108,11 +108,11 @@ Alcune modifiche all'interfaccia non sono ancora state riportate nello script di
 * ~~In Menu / Preferenze / Openbox Configuration Manager, scegliere Desktop e mettere 1 nel numero di desktop virtuali~~
 * In Menu / Preference / Personalizza Aspetto e Stile, scegliere in Widget -> "coding-for-school"
 * In Menu / Preference / Personalizza Aspetto e Stile, scegliere in Tema di icone -> "coding-for-school"
-* Aggiornare il sistema e fare il reboot:
+* ~~Aggiornare il sistema e fare il reboot: ~~
 ```
-  $ sudo apt-get update && sudo apt-get upgrade
+  ~~ $ sudo apt-get update && sudo apt-get upgrade ~~
 ```
-* Cancellare la cartella /home/pi/coding-for-school-os
+* ~~ Cancellare la cartella /home/pi/coding-for-school-os ~~
 
 5. Creare l'immagine finale di CFS-OS
 ---
@@ -136,7 +136,7 @@ Alcune modifiche all'interfaccia non sono ancora state riportate nello script di
   # unzip -p 201X-XX-XX-wheezy-raspbian.zip | dd of=/dev/sdX bs=4M
 ```
 
-### Elenco icone di default sul desktop di Raspbian
+### ~~ Elenco icone di default sul desktop di Raspbian
 
 - Shutdown		-Accesso rapido allo spegnimento
 - IDLE			-IDLE di python 2.7.X	
@@ -152,12 +152,12 @@ Alcune modifiche all'interfaccia non sono ancora state riportate nello script di
 - WiFi Config		-Strumento di configurazione del wifi
 - IDLE 3			-IDLE di python 3.x
 - Pi Store		-Software store della raspberry
-- Wolfram		-IDE di wolfram (http://www.wolfram.com/raspberry-pi/)
+- Wolfram		-IDE di wolfram (http://www.wolfram.com/raspberry-pi/) ~~
 
-### Icone rimanenti
+### ~~ Icone rimanenti
 
 - Scratch
-- Wifi config		-Cambiando nome all'icona
+- Wifi config		-Cambiando nome all'icona ~~
 
 ### Note:
 
