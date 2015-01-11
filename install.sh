@@ -51,6 +51,11 @@ wget http://goo.gl/Pthh62 -O install_scratchgpio5.sh
 bash install_scratchgpio5.sh
 rm -rf install_scratchgpio5.sh
 
+#TODO: is this still needed?
+#wget http://goo.gl/T8cLSU -O isid6.sh
+#sudo bash isid6.sh
+
+
 echo "Install WiringPI"
 rm -rf wiringPI
 git clone git://git.drogon.net/wiringPi
@@ -63,8 +68,7 @@ apt-get -y install avahi-daemon
 
 # Control of GPIO from LIRC
 apt-get -y install lirc liblircclient-dev
-#wget http://goo.gl/T8cLSU -O isid6.sh
-#sudo bash isid6.sh
+
 
 echo "System update..."
 apt-get update && apt-get upgrade -y
@@ -72,6 +76,9 @@ apt-get update && apt-get upgrade -y
 echo "Update Raspberry firmware"
 #apt-get -y install rpi-update
 rpi-update
+
+echo "Clean desktop"
+rm -rf /home/pi/Desktop/scratchgpio5.desktop
 
 echo "Clean home directory"
 #TODO gallochri: I think that python games folders can be left
