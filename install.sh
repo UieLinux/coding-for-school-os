@@ -15,12 +15,19 @@ update-rc.d cfs-registration defaults
 install -m 755 cfs-hostname-changer /etc/init.d/
 update-rc.d cfs-hostname-changer defaults
 
+# Install VNC Server
+apt-get -y install tightvncserver
+echo "ragno" | tightvncpasswd -f > /home/pi/.vnc/passwd
+chown pi:pi /home/pi/.vnc/passwd
+chmod 600 /home/pi/.vnc/passwd
+install -m 755 vncboot /etc/init.d/
+update-rc.d vncboot defaults
+
 echo "Artwork installation..."
 cd ../cfs-ui
 rm -rf /usr/share/icons/$CFS
 rm -rf /usr/share/themes/$CFS
 rm -rf /usr/share/$CFS
-
 cp -R icons /usr/share/icons/$CFS
 cp -R theme /usr/share/themes/$CFS
 cp -R artwork /usr/share/$CFS
@@ -55,12 +62,12 @@ rm -rf install_scratchgpio5.sh
 #wget http://goo.gl/T8cLSU -O isid6.sh
 #sudo bash isid6.sh
 
-
 echo "Install WiringPI"
 rm -rf wiringPI
 git clone git://git.drogon.net/wiringPi
 cd wiringPi
 ./build
+cd ..
 
 # Install bonjour service. 
 # Use avahi-discoverer on client to show devices list
@@ -68,7 +75,6 @@ apt-get -y install avahi-daemon
 
 # Control of GPIO from LIRC
 apt-get -y install lirc liblircclient-dev
-
 
 echo "System update..."
 apt-get update && apt-get upgrade -y
