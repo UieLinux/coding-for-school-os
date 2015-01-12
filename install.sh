@@ -16,11 +16,22 @@ install -m 755 cfs-hostname-changer /etc/init.d/
 update-rc.d cfs-hostname-changer defaults
 
 # Install VNC Server
-apt-get -y install tightvncserver
-su -l pi -c "mkdir -p ~/.vnc"
-echo "ragno" | tightvncpasswd -f > /home/pi/.vnc/passwd
-chown pi:pi /home/pi/.vnc/passwd
-chmod 600 /home/pi/.vnc/passwd
+apt-get -y install tightvncserver expect
+prog=/usr/bin/vncpasswd
+mypass="ragnone"
+/usr/bin/expect <<EOF
+spawn "$prog"
+expect "Password:"
+send "$mypass\r"
+expect "Verify:"
+send "$mypass\r"
+expect eof
+exit
+EOF
+su -l pi -c "vncpasswd"
+#echo "ragno" | tightvncpasswd -f > /home/pi/.vnc/passwd
+#chown pi:pi /home/pi/.vnc/passwd
+#chmod 600 /home/pi/.vnc/passwd
 install -m 755 vncboot /etc/init.d/
 update-rc.d vncboot defaults
 
