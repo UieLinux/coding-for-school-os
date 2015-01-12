@@ -19,7 +19,7 @@ update-rc.d cfs-hostname-changer defaults
 cd ../cfs-ui
 apt-get -y install tightvncserver
 su -l pi -c "mkdir -p ~/.config/autostart/"
-install -m 755 -o pi config/autostart/tightvnc.desktop \
+install -m 755 -o pi config/autostart/autotightvnc.desktop \
 	/home/pi/.config/autostart
 install -m 755 -o pi config/autostart/tightvnc.desktop \
         /home/pi/Desktop/
