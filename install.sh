@@ -16,13 +16,15 @@ install -m 755 cfs-hostname-changer /etc/init.d/
 update-rc.d cfs-hostname-changer defaults
 
 # Install VNC Server
+cd ../cfs-ui
 apt-get -y install tightvncserver
 su -l pi -c "mkdir -p ~/.config/autostart/"
 install -m 755 -o pi config/autostart/tightvnc.desktop \
 	/home/pi/.config/autostart
+install -m 755 -o pi config/autostart/tightvnc.desktop \
+        /home/pi/Desktop/
 
 echo "Artwork installation..."
-cd ../cfs-ui
 rm -rf /usr/share/icons/$CFS
 rm -rf /usr/share/themes/$CFS
 rm -rf /usr/share/$CFS
