@@ -2,7 +2,7 @@ Marca		Tipo	Classe	Test1*		Test2* 		Test3*	Costo	Negozio
 Kingston	SDC		4		 6,7		16,61		239,25	???
 Lexar		SDHC	10		 8,8		16,26		242,36	6,99	Mediaworld
 SanDisk		SDHC	10		12,7		18,15		242,76	9,99	MediaWorld
-Samsung		SDHC	10		11,8							6,99	Iper
+Samsung		SDHC	10		11,8		17.63		245,82	6,99	Iper
 
 Test1:
 Installazione Raspbian dal computer desktop con il comando:
@@ -13,5 +13,5 @@ Test su raspberrypi con il comando: hdparm -t /dev/mmcblk0
 la media del test ripetuto 3 volte 
 
 Test3:
-Test su raspberrypi con il comando: hdparm -t /dev/mmcblk0
+Test su raspberrypi con il comando: hdparm -T /dev/mmcblk0
 la media del test ripetuto 3 volte 
