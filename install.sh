@@ -40,6 +40,7 @@ su -l pi -c "lxpanelctl restart"
 
 echo "Setting wallpaper"
 su -l pi -c "pcmanfm --set-wallpaper /usr/share/coding-for-school/cfs-wallpaper.png"
+su -l pi -c "pcmanfm --wallpaper-mode=stretch"
 
 echo "Setting lxde theme..."
 install -m 644 -o pi config/openbox/lxde-pi-rc.xml \
