@@ -133,14 +133,14 @@ Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti p
 ```
   # unzip -p 201X-XX-XX-wheezy-raspbian.zip | dd of=/dev/sdX bs=4M
 ```
-Configurazione Iniziale
----
+###Configurazione Iniziale
+
 Valgono gli stessi passaggi per l'installazione in virtuale.
 Nel caso ci siano dei problemi con l'overscan e vengano visulaizzate delle bande nere attorno
 all'immagine del desktop è possibile disabilitarlo:
 *(8) Advaced Options
-	A1 Overscan
-	<Disable>
+	- A1 Overscan
+	- <Disable>
 
 ### Elenco icone di default sul desktop di Raspbian
 
