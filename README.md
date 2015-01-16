@@ -39,13 +39,13 @@ Per eseguire la VM segure le seguenti indicazioni:
 ---
 Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti passi:
 
-* Expand Filesystem
+* (1)Expand Filesystem
   - Basta dare invio e riformatta la SD in modo da occuparla interamente
-* Change User Password
+* (2)Change User Password
   - Impostare una password per l'utente pi (es: ragno)
-* Enable Boot to Desktop/Scratch
+* (3)Enable Boot to Desktop/Scratch
   - Selezionare "Desktop Log in..."
-* Internationalisation Options
+* (4)Internationalisation Options
   - I1-Change Locale
       - [*]it_IT.UTF-8 UTF-8 default locale for system enviroment
   - I2-Change Timezone
@@ -133,6 +133,14 @@ Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti p
 ```
   # unzip -p 201X-XX-XX-wheezy-raspbian.zip | dd of=/dev/sdX bs=4M
 ```
+Configurazione Iniziale
+---
+Valgono gli stessi passaggi per l'installazione in virtuale.
+Nel caso ci siano dei problemi con l'overscan e vengano visulaizzate delle bande nere attorno
+all'immagine del desktop è possibile disabilitarlo:
+*(8) Advaced Options
+	A1 Overscan
+	<Disable>
 
 ### Elenco icone di default sul desktop di Raspbian
 
