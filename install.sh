@@ -73,6 +73,16 @@ cd /home/pi
 #bash install_scratchgpio5.sh
 #rm -rf install_scratchgpio5.sh
 
+echo "System update..."
+apt-get update && apt-get upgrade -y
+
+echo "Install Pibrella python3 module..."
+apt-get -y install python3-pip 
+pip-3.2 install pibrella
+echo "Install Pibrella python module..."
+apt-get -y install python-pip 
+pip install pibrella
+
 echo "Install WiringPI"
 rm -rf wiringPI
 git clone git://git.drogon.net/wiringPi
@@ -87,9 +97,6 @@ apt-get -y install avahi-daemon
 # Control of GPIO from LIRC
 apt-get -y install lirc liblircclient-dev
 
-echo "System update..."
-apt-get update && apt-get upgrade -y
-
 echo "Update Raspberry firmware"
 #apt-get -y install rpi-update
 rpi-update
@@ -98,8 +105,6 @@ echo "Clean desktop"
 rm -rf /home/pi/Desktop/*
 
 echo "Clean home directory"
-#TODO gallochri: I think that python games folders can be left
-#rm -rf /home/pi/python_games
 
 #Self-destruction
 rm -r /home/pi/$CFS-os
