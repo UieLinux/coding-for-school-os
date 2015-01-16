@@ -3,4 +3,5 @@ Type=Application
 Name=TightVNC
 Exec=lxterminal --command "vncserver :1"
 StartupNotify=false
-Icon=preferences-desktop-remote-desktop-symbolic
+Categories=Utility;
+Icon=preferences-desktop-remote-desktop
