@@ -12,6 +12,7 @@ cd sources
 install -m 755 name_generator /usr/local/bin/
 install -m 755 cfs-registration /etc/init.d/
 update-rc.d cfs-registration defaults
+#TODO: execute this script before net configuration 
 install -m 755 cfs-hostname-changer /etc/init.d/
 update-rc.d cfs-hostname-changer defaults
 
@@ -21,10 +22,11 @@ apt-get -y install tightvncserver
 su -l pi -c "mkdir -p ~/.config/autostart/"
 install -m 755 -o pi config/autostart/autotightvnc.desktop \
 	/home/pi/.config/autostart
-install -m 755 -o pi config/autostart/tightvnc.desktop \
-        /home/pi/Desktop/
+install -m 755 config/autostart/tightvnc.desktop \
+        /usr/share/applications
 
 echo "Artwork installation..."
+#TODO: no use of coding-for-school icons theme, remove it?
 rm -rf /usr/share/icons/$CFS
 rm -rf /usr/share/themes/$CFS
 rm -rf /usr/share/$CFS
@@ -45,13 +47,15 @@ su -l pi -c "pcmanfm --wallpaper-mode=stretch"
 echo "Setting lxde theme..."
 install -m 644 -o pi config/openbox/lxde-pi-rc.xml \
 		/home/pi/.config/openbox/lxde-pi-rc.xml
-
+		
+#TODO: no use of coding-for-school icons theme, remove it?
 echo "Setting icon theme..."
 su -l pi -c "mkdir -p ~/.config/lxsession/LXDE-pi/"
 su -l pi -c "chmod -R 700 ~/.config/lxsession/"
 install -m 644 -o pi config/lxsession/LXDE-pi/desktop.conf \
 		/home/pi/.config/lxsession/LXDE-pi/desktop.conf
-		
+
+#TODO: install version 6 of scratch		
 echo "Install scratch GPIO"
 # Note: https://pihw.wordpress.com/lessons/rgb-led-lessons/rgb-led-lesson-2-scratch-gpio-getting-started/
 cd /home/pi
@@ -85,7 +89,7 @@ echo "Update Raspberry firmware"
 rpi-update
 
 echo "Clean desktop"
-rm -rf /home/pi/Desktop/scratchgpio5.desktop
+rm -rf /home/pi/Desktop/*
 
 echo "Clean home directory"
 #TODO gallochri: I think that python games folders can be left
