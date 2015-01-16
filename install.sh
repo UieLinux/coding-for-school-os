@@ -55,17 +55,23 @@ su -l pi -c "chmod -R 700 ~/.config/lxsession/"
 install -m 644 -o pi config/lxsession/LXDE-pi/desktop.conf \
 		/home/pi/.config/lxsession/LXDE-pi/desktop.conf
 
-#TODO: install version 6 of scratch		
-echo "Install scratch GPIO"
-# Note: https://pihw.wordpress.com/lessons/rgb-led-lessons/rgb-led-lesson-2-scratch-gpio-getting-started/
+#Resource https://github.com/cymplecy/scratch_gpio
+#Resource http://simplesi.net/scratchgpio/
+#Resource https://pihw.wordpress.com/lessons/rgb-led-lessons/rgb-led-lesson-2-scratch-gpio-getting-started/
+echo "Install scratch GPIO6"
 cd /home/pi
-wget http://goo.gl/Pthh62 -O install_scratchgpio5.sh
-bash install_scratchgpio5.sh
-rm -rf install_scratchgpio5.sh
+wget https://raw.githubusercontent.com/cymplecy/scratch_gpio/V6/install_scratchgpio6.sh
+bash install_scratchgpio6.sh
+rm -rf install_scratchgpio6.sh
+cd Desktop
+sed -i "s/Application;Education;Development;/Development;/g" scratchgpio6*
+mv scratchgpio6* /usr/share/applications/
+cd /home/pi
 
-#TODO: is this still needed?
-#wget http://goo.gl/T8cLSU -O isid6.sh
-#sudo bash isid6.sh
+#echo "Install scratch GPIO5"
+#wget http://goo.gl/Pthh62 -O install_scratchgpio5.sh
+#bash install_scratchgpio5.sh
+#rm -rf install_scratchgpio5.sh
 
 echo "Install WiringPI"
 rm -rf wiringPI
