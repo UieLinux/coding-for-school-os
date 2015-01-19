@@ -12,9 +12,9 @@ cd sources
 install -m 755 name_generator /usr/local/bin/
 install -m 755 cfs-registration /etc/init.d/
 update-rc.d cfs-registration defaults
-#TODO: execute this script before net configuration 
-install -m 755 cfs-hostname-changer /etc/init.d/
-update-rc.d cfs-hostname-changer defaults
+# keep the original
+# mv /etc/init.d/hostname.sh /etc/hostname-raspbian.sh
+install -m 755 hostname.sh /etc/init.d/
 
 # Install VNC Server
 cd ../cfs-ui
@@ -36,7 +36,7 @@ cp -R artwork /usr/share/$CFS
 
 echo "Custom panel config installation..."
 install -m 644 -o pi config/lxpanel/LXDE-pi/panels/panel \
-		/home/pi/.config/lxpanel/LXDE-pi/panels/		
+		/home/pi/.config/lxpanel/LXDE-pi/panels/
 echo "Restart panel"
 su -l pi -c "lxpanelctl restart"
 
@@ -47,7 +47,7 @@ su -l pi -c "pcmanfm --wallpaper-mode=stretch"
 echo "Setting lxde theme..."
 install -m 644 -o pi config/openbox/lxde-pi-rc.xml \
 		/home/pi/.config/openbox/lxde-pi-rc.xml
-		
+
 #TODO: no use of coding-for-school icons theme, remove it?
 echo "Setting icon theme..."
 su -l pi -c "mkdir -p ~/.config/lxsession/LXDE-pi/"
@@ -90,7 +90,7 @@ cd wiringPi
 ./build
 cd ..
 
-# Install bonjour service. 
+# Install bonjour service.
 # Use avahi-discoverer on client to show devices list
 apt-get -y install avahi-daemon
 
