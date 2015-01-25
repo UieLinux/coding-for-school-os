@@ -136,7 +136,7 @@ Al primo boot si avvia in automatico il tool raspi-config. Eseguire i seguenti p
 ###Configurazione Iniziale
 
 Valgono gli stessi passaggi per l'installazione in virtuale.
-Nel caso ci siano dei problemi con l'overscan e vengano visulaizzate delle bande nere attorno
+Nel caso ci siano dei problemi con l'overscan e vengano visualizzate delle bande nere attorno
 all'immagine del desktop è possibile disabilitarlo:
 *(8) Advaced Options
 	- A1 Overscan
