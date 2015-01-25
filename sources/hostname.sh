@@ -21,12 +21,6 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin
 
 do_start () {
 
-
-	ES=$?
-
-	[ "$VERBOSE" = no ] || log_action_end_msg $ES
-	# /cfs-hostname-changer
-
 	[ -f /etc/hostname ] && HOSTNAME="$(cat /etc/hostname)"
 
 	# Keep current name if /etc/hostname is missing.
@@ -46,17 +40,7 @@ do_start () {
 		new_name=$(name_generator)
 		echo "Set hostname to $new_name"
 
-		#touch /tmp/cfs-need-reboot
 		hostname "$new_name"
-		ES=$?
-		[ "$VERBOSE" != no ] && log_action_end_msg $ES
-
-		sed -i 's/raspberrypi/'${new_name}'/g' /etc/hostname
-		sed -i 's/raspberrypi/'${new_name}'/g' /etc/hosts
-
-		[ "$VERBOSE" != no ] && log_action_begin_msg "building new ssh key"
-		rm -rf /etc/ssh/ssh_host_*
-		ssh-keygen -A
 		ES=$?
 		[ "$VERBOSE" != no ] && log_action_end_msg $ES
 	fi

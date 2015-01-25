@@ -12,9 +12,10 @@ cd sources
 install -m 755 name_generator /usr/local/bin/
 install -m 755 cfs-registration /etc/init.d/
 update-rc.d cfs-registration defaults
-# keep the original
-# mv /etc/init.d/hostname.sh /etc/hostname-raspbian.sh
+
 install -m 755 hostname.sh /etc/init.d/
+install -m 755 hostname_changed.sh /etc/init.d/
+update-rc.d hostname_changed.sh defaults 36 S .
 
 # Install VNC Server
 cd ../cfs-ui
@@ -77,10 +78,10 @@ echo "System update..."
 apt-get update && apt-get upgrade -y
 
 echo "Install Pibrella python3 module..."
-apt-get -y install python3-pip 
+apt-get -y install python3-pip
 pip-3.2 install pibrella
 echo "Install Pibrella python module..."
-apt-get -y install python-pip 
+apt-get -y install python-pip
 pip install pibrella
 
 echo "Install WiringPI"
