@@ -142,14 +142,9 @@ all'immagine del desktop è possibile disabilitarlo:
 	- A1 Overscan
 	- <Disable>
 
-### Elenco icone di default sul desktop di Raspbian
+### Elenco icone di default sul desktop di CFS
 
 - Solo il cestino
-
-### Icone rimanenti
-
-- Scratch
-- Cestino
 
 ### Note:
 

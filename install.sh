@@ -19,6 +19,7 @@ update-rc.d hostname_changed.sh defaults 36 S .
 
 # Install VNC Server
 cd ../cfs-ui
+apt-get update
 apt-get -y install tightvncserver
 su -l pi -c "mkdir -p ~/.config/autostart/"
 install -m 755 -o pi config/autostart/autotightvnc.desktop \
@@ -75,7 +76,7 @@ cd /home/pi
 #rm -rf install_scratchgpio5.sh
 
 echo "System update..."
-apt-get update && apt-get upgrade -y
+apt-get upgrade -y
 
 echo "Install Pibrella python3 module..."
 apt-get -y install python3-pip
@@ -84,21 +85,21 @@ echo "Install Pibrella python module..."
 apt-get -y install python-pip
 pip install pibrella
 
-echo "Install WiringPI"
+echo "Install WiringPI..."
 rm -rf wiringPI
 git clone git://git.drogon.net/wiringPi
 cd wiringPi
 ./build
 cd ..
 
-# Install bonjour service.
+echo "Install bonjour service..."
 # Use avahi-discoverer on client to show devices list
 apt-get -y install avahi-daemon
 
-# Control of GPIO from LIRC
+echo "Install LIRC..."
 apt-get -y install lirc liblircclient-dev
 
-echo "Update Raspberry firmware"
+echo "Update Raspberry firmware..."
 #apt-get -y install rpi-update
 rpi-update
 
