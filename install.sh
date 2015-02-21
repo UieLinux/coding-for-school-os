@@ -106,8 +106,7 @@ echo "Install GeoGebra"
 apt-get -y install geogebra
 update-alternatives --set java /usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/jre/bin/java 
 
-echo "Install Browsers"
-apt-get -y install chromium-browser
+echo "Install Browser"
 apt-get -y install iceweasel iceweasel-l10n-it
 
 echo "Update Raspberry firmware..."
