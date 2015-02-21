@@ -99,6 +99,13 @@ apt-get -y install avahi-daemon
 echo "Install LIRC..."
 apt-get -y install lirc liblircclient-dev
 
+echo "Install GeoGebra"
+apt-get -y install geogebra
+
+echo "Install Browsers"
+apt-get -y install chromium-browser
+apt-get -y install iceweasel iceweasel-l10n-it
+
 echo "Update Raspberry firmware..."
 #apt-get -y install rpi-update
 rpi-update
