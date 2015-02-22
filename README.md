@@ -54,7 +54,25 @@ dd if=./immagine.img of=/dev/sdX bs=4k
 sudo sync
 ```
 
-5. Avviate CFS-OS
+5. Creare l'immagine con diskutil (Mac)
+---
+Se hai un Mac, usa questa procedura per installare CFS-OS nella SD.
+
+* Apri una finestra terminale e vai nella stessa cartella in cui hai messi il file img scompattato. Esegui questocomando:
+```bash
+diskutil list
+```
+* Identificate il disco corretto (e non la partizione) corrispondente alla scheda SD (ad esempio, disk4 e non disk4s1) dove, nel seguente esempio, si userebbe disk4: /dev/disk4
+```bash
+diskutil unmountDisk /dev/<disk# from diskutil>
+```
+* Eseguire il comando dd. Sostituire il percorso corretto del file immagine, e ancora una volta l’identificativo del disco trovato prima.
+```bash
+sudo dd bs=1m if=<your image file>.img of=/dev/<disk# from diskutil>
+```
+* Una volta dato il comando sudo dd, vi verrà chiesta la password di amministratore di OsX, dopodichè trascorreranno alcuni minuti senza nessun output a schermo mentre la scrittura viene effettuata. Una volta conclusa l’operazione, sarà possibile inserire la scheda nel Raspberry e avviarlo
+
+6. Avviate CFS-OS
 ---
 L'installazione è finita.
 Mettete l'SD nella Raspberry è iniziate a divertirvi.
