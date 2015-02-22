@@ -37,10 +37,21 @@ manualmente dall’apposita tendina.
 Se nel tuo computer hai Linux, usa questa procedura per installare CFS-OS nella SD.
 
 * Apri una finestra terminale 
-* Vai nella cartella in cui hai scaricato il file img
-* Esegui il seguente comando
+* Inserisci l'SD nel card reader del computer ed esegui questo comando:
+```bash
+df -h
+```
+*  Esegui l'umount della scheda: (sdb1 è solo un esempio, il nome potrebbe essere diverso)
+```bash
+umount /dev/sdb1
+```
+* Scrivi l'immagine nella SD (Attendi a quello che fate)
 ```bash
 dd if=./immagine.img of=/dev/sdX bs=4k
+```
+* Eseguito questo comando per essere sicuri che tutta la cache sia scritta nell'SD
+```bash
+sudo sync
 ```
 
 5. Avviate CFS-OS
