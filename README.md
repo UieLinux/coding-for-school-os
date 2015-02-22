@@ -70,6 +70,8 @@ diskutil unmountDisk /dev/<disk# from diskutil>
 ```bash
 sudo dd bs=1m if=<your image file>.img of=/dev/<disk# from diskutil>
 ```
+![Imgur](http://www.vemp.org/blog/wp-content/uploads/2013/07/sdcard_dd.jpg)
+
 * Una volta dato il comando sudo dd, vi verrà chiesta la password di amministratore di OsX, dopodichè trascorreranno alcuni minuti senza nessun output a schermo mentre la scrittura viene effettuata. Una volta conclusa l’operazione, sarà possibile inserire la scheda nel Raspberry e avviarlo
 
 6. Avviate CFS-OS
