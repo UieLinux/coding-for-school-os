@@ -1,11 +1,14 @@
 #!/bin/sh
 
-if [ $USER != "root" ]; then
-   echo "Devi sudare per essere root"
-   exit
-fi
-
 CFS=coding-for-school
+
+if [ $USER != "root" ]; 
+then
+	echo "Devi sudare per essere root"
+	echo "Per questa volta sudo io..."
+	echo "Al prompt rilancia ./install.sh"
+	sudo -s
+fi
 
 echo "Hostname generator installation..."
 cd sources
@@ -98,6 +101,13 @@ apt-get -y install avahi-daemon
 
 echo "Install LIRC..."
 apt-get -y install lirc liblircclient-dev
+
+echo "Install GeoGebra"
+apt-get -y install geogebra
+update-alternatives --set java /usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/jre/bin/java 
+
+echo "Install Browser"
+apt-get -y install iceweasel iceweasel-l10n-it
 
 echo "Update Raspberry firmware..."
 #apt-get -y install rpi-update
